@@ -72,7 +72,7 @@ public class MobCat : MonoBehaviour
             {
                 movePosition = moveRandomPosition();
             }
-            MobCats[i].transform.position = Vector3.MoveTowards(MobCats[i].transform.position, movePosition, Freespeed * Time.deltaTime);  //①②playerオブジェクトが, 目的地に移動, 移動速度
+            this.MobCats[i].transform.position = Vector3.MoveTowards(MobCats[i].transform.position, movePosition, Freespeed * Time.deltaTime);  //①②playerオブジェクトが, 目的地に移動, 移動速度
             //Debug.Log(this.transform.position);
         }
 
