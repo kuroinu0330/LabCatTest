@@ -15,8 +15,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timer = timeLimit; // タイマーを初期化
-        catCount = GameObject.FindGameObjectsWithTag("Cat").Length; // 猫の数を取得
-        UpdateCatCountDisplay(); // 猫の数を表示
+        //catCount = GameObject.FindGameObjectsWithTag("Cat").Length; // 猫の数を取得
+        //UpdateCatCountDisplay(); // 猫の数を表示
     }
 
     // Update is called once per frame
@@ -39,10 +39,10 @@ public class Timer : MonoBehaviour
         timerText.text = "Time: " + timer.ToString("F1"); // タイマーの残り時間を表示
     }
 
-    void UpdateCatCountDisplay()
-    {
-        catCountText.text = "Cats: " + catCount; // 猫の数を表示
-    }
+    //void UpdateCatCountDisplay()
+    //{
+        //catCountText.text = "Cats: " + catCount; // 猫の数を表示
+    //}
 
     void TimerExpired()
     {
