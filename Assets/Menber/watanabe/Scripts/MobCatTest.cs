@@ -31,6 +31,8 @@ public class MobCatTest : MonoBehaviour
     public int num = 1;
     public MobCatMove move;
     private Vector3 Player_pos; //プレイヤーのポジション
+
+    public static Vector3 Lerp(Vector3 a, Vector3 b, float t);
     void Start()
     {
         //movePosition = moveRandomPosition();
@@ -70,7 +72,6 @@ public class MobCatTest : MonoBehaviour
                 GatherMove();
                 break;
             case MobCatMove.sleep:
-
                 break;
         }
     }
@@ -86,11 +87,11 @@ public class MobCatTest : MonoBehaviour
     {
         if (transform.position.x >= _RightEdge.position.x)
         {
-             transform.position = Vector3.MoveTowards(transform.position, target.position, FreeSpeed * Time.deltaTime);
+             transform.position = Vector3.MoveTowards(transform.position, _RightEdge.position, FreeSpeed * Time.deltaTime);
         }
         if (transform.position.x <= _LeftEdge.position.x)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, FreeSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _LeftEdge.position, FreeSpeed * Time.deltaTime);
         }
         /*if (movePosition == player.transform.position)
         {
