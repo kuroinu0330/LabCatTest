@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossCatScript : MonoBehaviour
 {
+    // 移動時間
     public float BossSpeed = 5f;
 
     Vector2 BossMovePos;
