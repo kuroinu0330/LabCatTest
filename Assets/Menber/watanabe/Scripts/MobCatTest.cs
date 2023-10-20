@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MobCatTest : MonoBehaviour
 {
+    //子猫のリスト
     public List<GameObject> MobCats = new List<GameObject>();
+    //特定の移動するためのポイント
+    public List<GameObject> PointObj = new List<GameObject>();
+    [SerializeField] private Transform _LeftEdge;
+    [SerializeField] private Transform _RightEdge;
     //自由に動くスピード
     [SerializeField]
     private float FreeSpeed;
@@ -12,38 +17,32 @@ public class MobCatTest : MonoBehaviour
     [SerializeField]
     private float GetherSpeed;
     //集まる対象
-    #region　猫の範囲
+    
     [SerializeField]
     Transform target;
-    [SerializeField]
-    Transform targetx;
-    [SerializeField]
-    Transform target1;
-    [SerializeField]
-    Transform target2;
-    #endregion
-
-    [SerializeField] 
-    private Transform _LeftEdge;
-    [SerializeField] 
-    private Transform _RightEdge;
     Vector3 movePosition;
-    public int num = 1;
+    public int num;
     public MobCatMove move;
     private Vector3 Player_pos; //プレイヤーのポジション
 
-    public static Vector3 Lerp(Vector3 a, Vector3 b, float t);
+    private int direction = 1;
+    private bool flag;
+
+
     void Start()
     {
         //movePosition = moveRandomPosition();
     }
     public enum MobCatMove
     {
-        FreeMove,
+        Free,
         Gather,
         sleep,
     }
-
+    private void Update()
+    {
+        
+    }
 
     void FixedUpdate()
     {
@@ -54,7 +53,7 @@ public class MobCatTest : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            move = MobCatMove.FreeMove;
+            move = MobCatMove.Free;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -65,7 +64,7 @@ public class MobCatTest : MonoBehaviour
     {
         switch (move)
         {
-            case MobCatMove.FreeMove:
+            case MobCatMove.Free:
                 RandomMove();
                 break;
             case MobCatMove.Gather:
@@ -75,34 +74,70 @@ public class MobCatTest : MonoBehaviour
                 break;
         }
     }
-
-
-    private Vector3 moveRandomPosition()
-    {
-        Vector3 randomPosi = new Vector3(Random.Range(target.position.x, targetx.position.x), 
-                                        Random.Range(target1.position.y, target2.position.y));
-                                        return randomPosi;
-    }
     private void RandomMove()
     {
-        if (transform.position.x >= _RightEdge.position.x)
+        for (int num = 0; num < MobCats.Count; num++)
         {
-             transform.position = Vector3.MoveTowards(transform.position, _RightEdge.position, FreeSpeed * Time.deltaTime);
+            switch (num)
+            {
+                    #region 子猫たちの動き
+                    case 0:
+                    if (flag)
+                    {
+
+                        transform.position = Vector3.MoveTowards(transform.position, PointObj[0].transform.position, FreeSpeed * Time.deltaTime);
+                    }
+
+                    else if (!flag)
+                    {
+
+                        transform.position = Vector3.MoveTowards(transform.position, PointObj[1].transform.position, FreeSpeed * Time.deltaTime);
+                    }
+                    break;
+                case 1:
+                        //Debug.Log("2号");
+                        break;
+                    case 2:
+                        //Debug.Log("3号");
+                        break;
+                    case 3:
+                        //Debug.Log("4号");
+                        break;
+                    case 4:
+                        //Debug.Log("5号");
+                        break;
+                    case 5:
+                        //Debug.Log("6号");
+                        break;
+                    case 6:
+                        //Debug.Log("7号");
+                        break;
+                    case 7:
+                        //Debug.Log("8号");
+                        break;
+                        #endregion
+                }
+            
+
         }
-        if (transform.position.x <= _LeftEdge.position.x)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, _LeftEdge.position, FreeSpeed * Time.deltaTime);
-        }
-        /*if (movePosition == player.transform.position)
-        {
-            movePosition = moveRandomPosition();
-        }
-        this.player.transform.position = Vector3.MoveTowards(player.transform.position, movePosition, FreeSpeed * Time.deltaTime);  //①②playerオブジェクトが, 目的地に移動, 移動速度
-        Debug.Log(this.transform.position);*/
 
     }
     private void GatherMove()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == PointObj[0])
+        {
+
+            flag = true;
+        }
+
+        else if (other.gameObject == PointObj[1])
+        {
+
+            flag = false;
+        }
     }
 }
