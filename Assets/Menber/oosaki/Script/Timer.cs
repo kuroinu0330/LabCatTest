@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLimit = 10.0f; // タイムリミット（秒）
+    public float timeLimit = 50.0f; // タイムリミット（秒）
     private float timer; // タイマーのカウントダウン時間
     public Text timerText; // タイマー表示用のTextコンポーネント
     private int catCount; // 猫の数
