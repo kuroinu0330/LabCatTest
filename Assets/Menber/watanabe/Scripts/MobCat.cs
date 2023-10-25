@@ -6,11 +6,18 @@ public class MobCat : MonoBehaviour
 {
     [SerializeField]
     MobCatMg mobCat;
+    /*[SerializeField]
+    Timer timer;*/
+    //自由に動くスピード
     [SerializeField]
-    Timer timer;
-    [SerializeField,Header("自由に動くスピード")]private float FreeSpeed;
-    [SerializeField,Header("集まるときのスピード")]private float GetherSpeed;
-    [SerializeField,Header("集まる対象")]Transform target;
+    private float FreeSpeed;
+    //集まるときのスピード
+    [SerializeField]
+    private float GetherSpeed;
+    //集まる対象
+    [SerializeField]
+    Transform target;
+    //動かす猫指定
     [SerializeField]
     public int num;
     //指定のobj
@@ -101,13 +108,7 @@ public class MobCat : MonoBehaviour
         }
     }
     private void SleepMove()
-    {   
-        if (timer.timeLimit < 30.0f)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                
-            }
-        }
+    {
+        RandomMove();
     }
 }

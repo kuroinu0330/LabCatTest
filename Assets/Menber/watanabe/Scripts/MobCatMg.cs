@@ -5,10 +5,9 @@ using static MobCatMg;
 
 public class MobCatMg : MonoBehaviour
 {
-    [SerializeField,Header("子猫のリスト")]
+    //子猫のリスト
     public List<GameObject> MobCats = new List<GameObject>();
-    [SerializeField, Header("ポイント")]
+    //特定の移動するためのポイント
     public List<GameObject> PointObj1 = new List<GameObject>();
-    [SerializeField, Header("ポイント２")]
     public List<GameObject> PointObj2 = new List<GameObject>();
 }
