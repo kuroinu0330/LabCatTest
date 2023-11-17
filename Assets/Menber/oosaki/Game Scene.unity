@@ -220,11 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36d9206254c5e94aaf0d982181da704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  destinationX: -5.2
-=======
-  destinationX: -5.25
->>>>>>> 6bf16ea556835f001594dac7c0b9c0788ba93ada
+ 6bf16ea556835f001594dac7c0b9c0788ba93ada
 --- !u!1 &732780329
 GameObject:
   m_ObjectHideFlags: 0
