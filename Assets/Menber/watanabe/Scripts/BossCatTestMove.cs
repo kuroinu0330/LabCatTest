@@ -17,7 +17,7 @@ public class BossCatTestMove : MonoBehaviour
     }
     void Update()
     {
-        if (isActive == true)
+        if (isActive)
         {
             BossMoves();
         }
@@ -46,5 +46,9 @@ public class BossCatTestMove : MonoBehaviour
         isActive = true;
         //anim.SetBool("AcBool", true);
         Destroy(GetComponent<Animator>());
+    }
+    public void ActiveFalse()
+    {
+        isActive = false;
     }
 }
