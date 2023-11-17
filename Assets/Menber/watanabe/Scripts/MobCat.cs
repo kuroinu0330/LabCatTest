@@ -28,6 +28,11 @@ public class MobCat : MonoBehaviour
     public MobCatMove move;
     [SerializeField]
     private bool flag;
+    [SerializeField,Header("開始時間")]
+    private float _currentTime;
+    [SerializeField, Header("何秒間にするか")]
+    private float _spanTime;
+    //猫の行動
     public enum MobCatMove
     {
         Free,
@@ -37,6 +42,7 @@ public class MobCat : MonoBehaviour
     void Update()
     {
         MobCatMoveState();
+        //動作確認用のキーコード
         if (Input.GetKeyDown(KeyCode.Q))
         {
             move = MobCatMove.Gather;
@@ -70,9 +76,11 @@ public class MobCat : MonoBehaviour
     {
         if (flag)
         {
+            //
             transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
                                                      mobCat.PointObj1[_PointObj1].transform.position, 
                                                      FreeSpeed * Time.deltaTime);
+            
         }
         else
         {
@@ -110,5 +118,20 @@ public class MobCat : MonoBehaviour
     private void SleepMove()
     {
         RandomMove();
+        _currentTime += Time.deltaTime;
+        if (_currentTime > _spanTime)
+        {
+            int Ran =  Random.Range(0, 100);
+            Debug.Log(Ran);
+            if (Ran < 10)
+            {
+                Debug.Log("寝るかな？");
+
+                _currentTime = 0f;
+            }
+
+        }
+
     }
+
 }

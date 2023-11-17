@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Menber/watanabe/Scenes/TitleSnTs.unity
+    guid: 7f4cd09f16da003408d29b2ddef346c1
+  - enabled: 1
+    path: Assets/Menber/watanabe/Scenes/TestScene.unity
+    guid: 207467dd94483c54cbf123b3ac9529a3
   m_configObjects: {}
