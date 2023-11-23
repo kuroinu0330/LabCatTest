@@ -40,13 +40,6 @@ public class BossCatTestMove : MonoBehaviour
         //transform.position = Vector3.Lerp(transform.position, _BossMovePos, _BossSpeed * Time.deltaTime);
 
     }
-    public void ActiveTrue()
-    {
-        //アニメーションが終わったらisActiveをTrueにする。
-        isActive = true;
-        //anim.SetBool("AcBool", true);
-        Destroy(GetComponent<Animator>());
-    }
     public void ActiveFalse()
     {
         isActive = false;

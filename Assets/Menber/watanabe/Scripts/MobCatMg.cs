@@ -29,21 +29,17 @@ public class MobCatMg : MonoBehaviour
     }
     public void Update()
     {
-        InstantiateCat();
+       Invoke("CreateCat",1.0f);
     }
-    public void InstantiateCat()
+    private void CreateCat()
     {
-        /*Cat = null;
         if (MobNum < 8)
         {
-            var obj = Instantiate(Cat, new Vector3(BossCatPos.transform.position.x,BossCatPos.transform.position.y, 0.0f), Quaternion.identity);
-            MobCats.Add(Cat);
+            var obj = Instantiate(Cat, new Vector3(BossCatPos.transform.position.x, 
+                                                   BossCatPos.transform.position.y, 0.0f),
+                                                   Quaternion.identity);
+            MobCats.Add(obj);
             MobNum++;
         }
-        else
-        {
-
-        }*/
-
     }
 }

@@ -121,7 +121,7 @@ public class MobCat : MonoBehaviour
         _currentTime += Time.deltaTime;
         if (_currentTime > _spanTime)
         {
-            int Ran =  Random.Range(0, 100);
+            int Ran = Random.Range(0, 100);
             Debug.Log(Ran);
             if (Ran < 10)
             {
