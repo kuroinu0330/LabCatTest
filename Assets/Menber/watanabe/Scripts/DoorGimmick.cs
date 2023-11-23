@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DoorGimmick : MonoBehaviour
@@ -27,10 +28,15 @@ public class DoorGimmick : MonoBehaviour
             image.sprite = newSprite;
             //anim.SetBool("DoorBool", true);
             door.DoorMove();
+            Invoke("SceneChange", 3.0f);
         }
         else
         {
             image.sprite = nowSprite;
         }
+    }
+    private void SceneChange()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }

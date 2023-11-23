@@ -42,6 +42,7 @@ public class BossCatTestMove : MonoBehaviour
     }
     public void ActiveFalse()
     {
-        isActive = false;
+        isActive = true;
+        Destroy(GetComponent<Animator>());
     }
 }
