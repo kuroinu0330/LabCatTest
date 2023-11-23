@@ -419,7 +419,7 @@ MonoBehaviour:
   scrollPanel: {fileID: 732780330}
   scrollSpeed: 50
   loopPosition: 1900
-  loopTime: 10
+  loopTime: 50
 --- !u!1 &800907330
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   scrollPanel: {fileID: 800907331}
   scrollSpeed: 50
   loopPosition: -9
-  loopTime: 10
+  loopTime: 50
 --- !u!1 &812173035
 GameObject:
   m_ObjectHideFlags: 0
