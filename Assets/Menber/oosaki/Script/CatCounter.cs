@@ -16,7 +16,7 @@ public class CatCounter : MonoBehaviour
             int objectCount = GameObject.FindGameObjectsWithTag(targetObject.tag).Length;
 
             // テキストに数を表示
-            countText.text = "オブジェクトの数: " + objectCount.ToString();
+            countText.text = objectCount + "匹".ToString();
         }
         else
         {
