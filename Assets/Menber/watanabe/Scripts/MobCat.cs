@@ -74,9 +74,8 @@ public class MobCat : MonoBehaviour
     
     private void RandomMove()
     {
-        if (flag)
+        /*if (flag)
         {
-            //
             transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
                                                      mobCat.PointObj1[_PointObj1].transform.position, 
                                                      FreeSpeed * Time.deltaTime);
@@ -88,12 +87,13 @@ public class MobCat : MonoBehaviour
                                                      mobCat.PointObj2[_PointObj2].transform.position,
                                                      FreeSpeed * Time.deltaTime);
         }
+        */
     }
     private void GatherMove()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == mobCat.PointObj1[_PointObj1])
         {
@@ -103,7 +103,7 @@ public class MobCat : MonoBehaviour
         {
             flag = true;
         }
-    }
+    }*/
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Trap1"))

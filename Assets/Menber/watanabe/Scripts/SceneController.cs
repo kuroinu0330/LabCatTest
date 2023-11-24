@@ -8,6 +8,6 @@ public class SceneController : MonoBehaviour
 {
     public void SceneMg()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("TutorialScene");
     }
 }

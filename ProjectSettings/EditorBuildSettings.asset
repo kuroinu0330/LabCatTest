@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Menber/watanabe/Scenes/TitleSnTs.unity
     guid: 7f4cd09f16da003408d29b2ddef346c1
   - enabled: 1
-    path: Assets/Menber/watanabe/Scenes/TestScene.unity
+    path: Assets/Menber/watanabe/Scenes/TutorialScene.unity
     guid: 207467dd94483c54cbf123b3ac9529a3
   - enabled: 1
     path: Assets/Menber/watanabe/Scenes/MainScene.unity
     guid: 57c739818327ece4ea1c60d00fc13eb7
+  - enabled: 1
+    path: Assets/Menber/watanabe/Scenes/ResultScene.unity
+    guid: 21e46305ab449c548a12cdf23117a174
   m_configObjects: {}

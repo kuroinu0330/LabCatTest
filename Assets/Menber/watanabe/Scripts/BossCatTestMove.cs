@@ -35,8 +35,8 @@ public class BossCatTestMove : MonoBehaviour
             _BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         }
-        // ‚Ù‚Ú“™‘¬‚Å“®‚­
-        transform.position = Vector2.MoveTowards(transform.position, _BossMovePos, _BossSpeed * Time.deltaTime);
+            // ‚Ù‚Ú“™‘¬‚Å“®‚­
+            transform.position = Vector2.MoveTowards(transform.position, _BossMovePos, _BossSpeed * Time.deltaTime);
         //transform.position = Vector3.Lerp(transform.position, _BossMovePos, _BossSpeed * Time.deltaTime);
 
     }
