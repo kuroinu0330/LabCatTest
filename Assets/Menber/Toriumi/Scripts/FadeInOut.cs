@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FadeInOut : MonoBehaviour
 {
     // 好きに速度を変更してください。
-    // 子の速度が体感最大位
+    // この速度が体感最大位
     [SerializeField]
     float Speed = 0.01f;
 
