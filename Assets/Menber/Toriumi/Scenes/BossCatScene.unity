@@ -760,7 +760,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< HEAD
 --- !u!224 &1478564620
+=======
+--- !u!224 &1589966446
+>>>>>>> origin/watanabe
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -789,6 +793,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478564619}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5a413aed6b4563145b42ffa059beaa37, type: 2}
   m_CullingMode: 0
@@ -801,6 +806,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1478564622
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f66f2452132a249bafcf58149792be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0.01
+  In: 1
+  Out: 0
+--- !u!114 &1589966448
+>>>>>>> origin/watanabe
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -942,7 +957,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642055089}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3813f4bd1f19d84a80dcbd3c004e212, type: 3}
   m_Name: 
