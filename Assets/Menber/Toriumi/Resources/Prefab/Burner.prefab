@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3033038304943912757}
   - component: {fileID: 5832044852981609181}
   - component: {fileID: 7403562911684838083}
+  - component: {fileID: 5479669268466714520}
   m_Layer: 0
   m_Name: Burner
   m_TagString: Untagged
@@ -118,3 +119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08523aee5ffb42478d6c0037a4372b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5479669268466714520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904347872004788905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3157eb6a388d0a846a087811253785f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fps: 10
