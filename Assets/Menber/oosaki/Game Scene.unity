@@ -432,7 +432,6 @@ GameObject:
   - component: {fileID: 800907331}
   - component: {fileID: 800907334}
   - component: {fileID: 800907333}
-  - component: {fileID: 800907332}
   - component: {fileID: 800907335}
   m_Layer: 5
   m_Name: Panel2
@@ -461,18 +460,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1919.9917, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &800907332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800907330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044f116aaef1ce543b54a98359500e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &800907333
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -780,6 +767,7 @@ MonoBehaviour:
   targetObject: {fileID: 294890232}
   objectsToGather: []
   gatheringSpeed: 5
+  cooldownTime: 2
 --- !u!114 &1246326526
 MonoBehaviour:
   m_ObjectHideFlags: 0
