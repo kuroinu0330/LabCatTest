@@ -731,6 +731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 904347872004788905, guid: ecba9f90208a50b408817317990daf5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6009898387814853173, guid: ecba9f90208a50b408817317990daf5d, type: 3}
       propertyPath: m_Name
       value: Burner
