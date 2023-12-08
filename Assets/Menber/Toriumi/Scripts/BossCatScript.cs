@@ -15,6 +15,17 @@ public class BossCatScript : MonoBehaviour
     private float _time;
     private float _timeEnd = 3;
 
+    // 制限する値 Inspector上で変更
+    [SerializeField]
+    float   xMaxLimit,
+            yMaxLimit,
+            xMinLimit,
+            yMinLimit;
+
+    // これでスクロールしても変わらず制限できる
+    [SerializeField]
+    GameObject LimitObject;
+    
     void Update()
     {
         BossMove();
@@ -42,6 +53,10 @@ public class BossCatScript : MonoBehaviour
             BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(BossMovePos);
         }
+
+        // 範囲制限
+        BossMovePos.x = Mathf.Clamp(BossMovePos.x, LimitObject.transform.position.x + xMinLimit, LimitObject.transform.position.x + xMaxLimit); ;
+        BossMovePos.y = Mathf.Clamp(BossMovePos.y, LimitObject.transform.position.y + yMinLimit, LimitObject.transform.position.y + yMaxLimit);
 
         // ほぼ等速で動く
         transform.position = Vector2.MoveTowards(transform.position, BossMovePos, BossSpeed * Time.deltaTime);
