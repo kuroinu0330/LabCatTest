@@ -7,8 +7,11 @@ public class ObjectGatherer : MonoBehaviour
     public Transform targetObject; // 集める対象のオブジェクト
     public GameObject[] objectsToGather; // 集めるオブジェクトのリスト
     public float gatheringSpeed = 5f; // オブジェクトが集まる速度
+    public float cooldownTime = 2f; // クールダウン時間
 
     private bool isGathering = false;
+    private bool cooldown = false;
+    private float cooldownTimer = 0f;
 
     void Update()
     {
@@ -16,12 +19,25 @@ public class ObjectGatherer : MonoBehaviour
         {
             GatherObjects();
         }
+
+        if (cooldown)
+        {
+            cooldownTimer += Time.deltaTime;
+            if (cooldownTimer >= cooldownTime)
+            {
+                cooldown = false;
+                cooldownTimer = 0f;
+            }
+        }
     }
 
     // ボタンから呼ばれるメソッド
     public void StartGathering()
     {
-        isGathering = true;
+        if (!cooldown)
+        {
+            isGathering = true;
+        }
     }
 
     void GatherObjects()
@@ -30,6 +46,8 @@ public class ObjectGatherer : MonoBehaviour
         {
             // targetObjectに向かってオブジェクトを動かす
             Vector3 targetPosition = targetObject.position;
+            bool allObjectsAtTarget = true;
+
             foreach (GameObject obj in objectsToGather)
             {
                 if (obj != null)
@@ -39,9 +57,16 @@ public class ObjectGatherer : MonoBehaviour
 
                     if (distanceToTarget > 0.1f) // 目標地点に近づくまで移動
                     {
+                        allObjectsAtTarget = false;
                         obj.transform.Translate(moveDirection.normalized * gatheringSpeed * Time.deltaTime);
                     }
                 }
+            }
+
+            if (allObjectsAtTarget)
+            {
+                isGathering = false;
+                cooldown = true;
             }
         }
         else
