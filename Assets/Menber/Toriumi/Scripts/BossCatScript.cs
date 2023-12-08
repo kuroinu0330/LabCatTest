@@ -44,22 +44,17 @@ public class BossCatScript : MonoBehaviour
         // 左クリック押すと
         if(Input.GetMouseButtonDown(0))
         {
-
-            // スクリーン座標をワールド座標に変換
-            /*if (BossMovePos.x < 600.0f * Screen.currentResolution.width && BossMovePos.y > 260.0f * Screen.currentResolution.height)
-            {
-                BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }*/
             BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(BossMovePos);
         }
 
-        // 範囲制限
-        BossMovePos.x = Mathf.Clamp(BossMovePos.x, LimitObject.transform.position.x + xMinLimit, LimitObject.transform.position.x + xMaxLimit); ;
-        BossMovePos.y = Mathf.Clamp(BossMovePos.y, LimitObject.transform.position.y + yMinLimit, LimitObject.transform.position.y + yMaxLimit);
-
-        // ほぼ等速で動く
-        transform.position = Vector2.MoveTowards(transform.position, BossMovePos, BossSpeed * Time.deltaTime);
+        // 範囲制限 この中で押さなければ反応しない
+        if (BossMovePos.x == Mathf.Clamp(BossMovePos.x, LimitObject.transform.position.x + xMinLimit, LimitObject.transform.position.x + xMaxLimit) &&
+            BossMovePos.y == Mathf.Clamp(BossMovePos.y, LimitObject.transform.position.y + yMinLimit, LimitObject.transform.position.y + yMaxLimit))
+        {
+            // ほぼ等速で動く
+            transform.position = Vector2.MoveTowards(transform.position, BossMovePos, BossSpeed * Time.deltaTime);
+        }
     }
 }
 
