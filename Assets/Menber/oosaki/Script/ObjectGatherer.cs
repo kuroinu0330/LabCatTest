@@ -1,13 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectGatherer : MonoBehaviour
 {
     public Transform targetObject; // 集める対象のオブジェクト
     public GameObject[] objectsToGather; // 集めるオブジェクトのリスト
     public float gatheringSpeed = 5f; // オブジェクトが集まる速度
-    public float cooldownTime = 2f; // クールダウン時間
+    public float cooldownTime = 10f; // クールダウン時間
 
     private bool isGathering = false;
     private bool cooldown = false;
@@ -75,3 +75,5 @@ public class ObjectGatherer : MonoBehaviour
         }
     }
 }
+
+
