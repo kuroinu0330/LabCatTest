@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +10,10 @@ public class AnimationFPSController : MonoBehaviour
 
     Animator anim;
 
-    // ‚µ‚«‚¢’lŠÔ
+    // ã—ãã„å€¤æ™‚é–“
     float holdTime;
 
-    // ƒXƒLƒbƒv‚³‚ê‚½XVŠÔ
+    // ã‚¹ã‚­ãƒƒãƒ—ã•ã‚ŒãŸæ›´æ–°æ™‚é–“
     float skippTime;
 
     private void Awake()
@@ -31,18 +31,18 @@ public class AnimationFPSController : MonoBehaviour
             return;
         }
 
-        // ƒAƒjƒ[ƒVƒ‡ƒ“‚ÌŠÔ‚ğŒvZ‚·‚éB
+        // ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®æ™‚é–“ã‚’è¨ˆç®—ã™ã‚‹ã€‚
         anim.Update(skippTime);
         skippTime = 0f;
     }
 
-    // ‚µ‚«‚¢’lŠÔ‚Ì‰Šú‰»
+    // ã—ãã„å€¤æ™‚é–“ã®åˆæœŸåŒ–
     void InitializeThresholdTime()
     {
         holdTime = 1f / fps;
     }
 
-    // Inspector‚Ì’l‚Ì•ÏX‚Ìˆ—
+    // Inspectorã®å€¤ã®å¤‰æ›´æ™‚ã®å‡¦ç†
     private void OnValidate()
     {
         InitializeThresholdTime();
