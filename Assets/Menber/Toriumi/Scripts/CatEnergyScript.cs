@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CatEnergyScript : MonoBehaviour
 {
+
+    Animator anim;
+
     // エナジーフラグ
     bool EnergyFlag = false;
 
@@ -18,6 +21,11 @@ public class CatEnergyScript : MonoBehaviour
 
     // 猫の体力
     int CatHP = 1;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -64,6 +72,15 @@ public class CatEnergyScript : MonoBehaviour
             EnergyFlag = false;
             TrapFlag = false;
             EnergyTime = 0;
+        }
+    }
+
+    // 死んだときのアニメーション
+    public void DeathCat()
+    {
+        if (CatHP == 0)
+        {
+            anim.SetBool("DeathOn", true);
         }
     }
 }

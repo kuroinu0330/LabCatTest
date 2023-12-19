@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        // 2ŒÂ‚ ‚Á‚½‚çÁ‚·B‚»‚¤‚¶‚á‚È‚¯‚ê‚Îc‚·B
+        // 2å€‹ã‚ã£ãŸã‚‰æ¶ˆã™ã€‚ãã†ã˜ã‚ƒãªã‘ã‚Œã°æ®‹ã™ã€‚
 
         if(Instance == null)
         {
@@ -62,10 +62,10 @@ public class SoundManager : MonoBehaviour
 [System.Serializable]
 public class BGMSoundData
 {
-    // ‚±‚±‚Ég‚¤BGM‚Ì–¼‘O‚ğ‘‚­
+    // ã“ã“ã«ä½¿ã†BGMã®åå‰ã‚’æ›¸ã
     public enum BGM
     {
-        //—á
+        //ä¾‹
         OP,
         ED,
         
@@ -80,10 +80,10 @@ public class BGMSoundData
 [System.Serializable]
 public class SESoundData
 {
-    // ‚±‚±‚Ég‚¤SE‚Ì–¼‘O‚ğ‘‚­
+    // ã“ã“ã«ä½¿ã†SEã®åå‰ã‚’æ›¸ã
     public enum SE
     {
-        // —á
+        // ä¾‹
         Cat,
     }
 
@@ -93,9 +93,9 @@ public class SESoundData
     public float volume = 1;
 }
 
-// g‚¢‚½‚¢‚Æ‚±‚ë‚É‚±‚ê‚ğ“Ë‚Á‚Ş
+// ä½¿ã„ãŸã„ã¨ã“ã‚ã«ã“ã‚Œã‚’çªã£è¾¼ã‚€
 //SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Title);
 
-// ‚±‚ê‚Å~‚Ü‚é
+// ã“ã‚Œã§æ­¢ã¾ã‚‹
 //SoundManager.Instance.StopBGM(BGMSoundData.BGM.Title);
 

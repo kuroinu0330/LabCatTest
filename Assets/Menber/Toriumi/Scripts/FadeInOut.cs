@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class FadeInOut : MonoBehaviour
 {
-    // D‚«‚É‘¬“x‚ğ•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
-    // ‚±‚Ì‘¬“x‚ª‘ÌŠ´Å‘åˆÊ
+    // å¥½ãã«é€Ÿåº¦ã‚’å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
+    // ã“ã®é€Ÿåº¦ãŒä½“æ„Ÿæœ€å¤§ä½
     [SerializeField]
     float Speed = 0.01f;
 
