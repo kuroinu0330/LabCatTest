@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MobCat; 
 
 public class MobCat : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class MobCat : MonoBehaviour
     private float _currentTime;
     [SerializeField, Header("何秒間にするか")]
     private float _spanTime;
+    [SerializeField, Header("ゲームスタート")]
+    private bool isActive = false;
     //猫の行動
     public enum MobCatMove
     {
@@ -56,6 +59,7 @@ public class MobCat : MonoBehaviour
             move = MobCatMove.Sleep;
         }
     }
+    //ステートメント駆動
     public void MobCatMoveState()
     {
         switch (move)
@@ -71,29 +75,46 @@ public class MobCat : MonoBehaviour
                 break;
         }
     }
-    
+    //一定の動きをする
     private void RandomMove()
     {
-        /*if (flag)
+        if (isActive == true)
         {
-            transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
-                                                     mobCat.PointObj1[_PointObj1].transform.position, 
-                                                     FreeSpeed * Time.deltaTime);
-            
+            if (flag == true)
+            {
+                transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
+                                                         mobCat.PointObj1[_PointObj1].transform.position,
+                                                         FreeSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
+                                                         mobCat.PointObj2[_PointObj2].transform.position,
+                                                         FreeSpeed * Time.deltaTime);
+            }
         }
-        else
-        {
-            transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position, 
-                                                     mobCat.PointObj2[_PointObj2].transform.position,
-                                                     FreeSpeed * Time.deltaTime);
-        }
-        */
+        Sleep();
+        
     }
+    //Bossに向かう
     private void GatherMove()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
     }
-    /*private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
+    {
+        //トラップに当たると消える
+        if (other.gameObject.CompareTag("Trap1"))
+        {
+            Destroy(this.gameObject);
+        }
+        //トラップに当たると消える
+        if (other.gameObject.CompareTag("Trap2"))
+        {
+            Destroy(this.gameObject);
+        }
+    }*/
+    private void OnTriggerEnter2D(Collider2D　other)
     {
         if (other.gameObject == mobCat.PointObj1[_PointObj1])
         {
@@ -103,21 +124,19 @@ public class MobCat : MonoBehaviour
         {
             flag = true;
         }
-    }*/
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Trap1"))
-        {
-            Destroy(this.gameObject);
-        }
-        if (other.gameObject.CompareTag("Trap2"))
-        {
-            Destroy(this.gameObject);
-        }
     }
     private void SleepMove()
     {
-        RandomMove();
+        //毛づくろいのアニメションをStart
+
+
+    }
+
+    /// <summary>
+    /// 何秒間づつに10%の確率で毛づくろいをする
+    /// </summary>
+    private void Sleep()
+    {
         _currentTime += Time.deltaTime;
         if (_currentTime > _spanTime)
         {
@@ -125,13 +144,10 @@ public class MobCat : MonoBehaviour
             Debug.Log(Ran);
             if (Ran < 10)
             {
-                Debug.Log("寝るかな？");
-
-                _currentTime = 0f;
+                Debug.Log("削黒い");
+                move.HasFlag(MobCatMove.Sleep);
             }
-
+            _currentTime = 0;
         }
-
     }
-
 }

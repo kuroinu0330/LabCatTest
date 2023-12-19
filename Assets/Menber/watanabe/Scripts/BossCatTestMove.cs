@@ -22,7 +22,6 @@ public class BossCatTestMove : MonoBehaviour
             BossMoves();
         }
     }
-
     // ƒ{ƒX”L‚ÌˆÚ“®
     public void BossMoves()
     {

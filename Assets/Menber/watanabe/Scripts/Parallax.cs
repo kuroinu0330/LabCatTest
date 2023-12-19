@@ -14,6 +14,10 @@ public class Parallax : MonoBehaviour
     private float _timer = 0;
     [SerializeField]
     private float _endTime;
+    [SerializeField]
+    private GameObject _burnerObj;
+    [SerializeField]
+    private GameObject _panel;
 
     void Start()
     {
@@ -52,10 +56,15 @@ public class Parallax : MonoBehaviour
         if (temp > startpos + length)
         {
             _countMap++;
+            //Instantiate(_burnerObj, new Vector3(0.0f, 1.5f, 1.0f), Quaternion.identity);
+            Instantiate(_burnerObj);
         }
+        //スクロールが逆になっても動作する
         else if (temp < startpos - length)
         {
             _countMap++;
+            //Instantiate(_burnerObj, new Vector3(_panel.transform.position.x, -1.0f, 1.0f), Quaternion.identity);
+            //Instantiate(_burnerObj);
         }
         // 無限スクロール
         // 画面外になったら背景画像を移動させる
