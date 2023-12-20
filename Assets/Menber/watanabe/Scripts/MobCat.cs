@@ -100,7 +100,7 @@ public class MobCat : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
     }
-    /*private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         //トラップに当たると消える
         if (other.gameObject.CompareTag("Trap1"))
@@ -112,7 +112,7 @@ public class MobCat : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }*/
+    }
     private void OnTriggerEnter2D(Collider2D　other)
     {
         if (other.gameObject == mobCat.PointObj1[_PointObj1])

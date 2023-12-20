@@ -18,7 +18,7 @@ public class MobCatMg : MonoBehaviour
     [SerializeField, Header("猫向かうポイント2")]
     public List<GameObject> PointObj2 = new List<GameObject>();
     [SerializeField, Header("猫の数")]
-    private int MobNum;
+    public int MobNum;
     //パンをまとめておく空のオブジェクト
     [SerializeField]
     private GameObject EmptyObject;
