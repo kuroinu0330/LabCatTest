@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1857968760}
   cooldownTime: 3
-  cooldownAnimator: {fileID: 0}
+  cooldownAnimator: {fileID: 1857968763}
 --- !u!1 &1862341125
 GameObject:
   m_ObjectHideFlags: 0

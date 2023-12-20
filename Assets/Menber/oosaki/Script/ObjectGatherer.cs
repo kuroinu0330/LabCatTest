@@ -47,14 +47,12 @@ public class ObjectGatherer : MonoBehaviour
             // targetObjectに向かってオブジェクトを動かす
             Vector3 targetPosition = targetObject.position;
             bool allObjectsAtTarget = true;
-
             foreach (GameObject obj in objectsToGather)
             {
                 if (obj != null)
                 {
                     Vector3 moveDirection = targetPosition - obj.transform.position;
                     float distanceToTarget = moveDirection.magnitude;
-
                     if (distanceToTarget > 0.1f) // 目標地点に近づくまで移動
                     {
                         allObjectsAtTarget = false;

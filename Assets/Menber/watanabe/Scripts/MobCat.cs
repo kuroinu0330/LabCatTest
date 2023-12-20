@@ -94,9 +94,8 @@ public class MobCat : MonoBehaviour
             }
         }
         Sleep();
-        
     }
-    //Boss‚ÉŒü‚©‚¤
+    /*Boss‚ÉŒü‚©‚¤*/
     private void GatherMove()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
@@ -128,7 +127,6 @@ public class MobCat : MonoBehaviour
     private void SleepMove()
     {
         //–Ñ‚Ã‚­‚ë‚¢‚ÌƒAƒjƒƒVƒ‡ƒ“‚ğStart
-
 
     }
 
