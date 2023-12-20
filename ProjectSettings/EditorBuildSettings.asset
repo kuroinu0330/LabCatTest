@@ -8,25 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Menber/watanabe/Scenes/TitleSnTs.unity
     guid: 7f4cd09f16da003408d29b2ddef346c1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Menber/watanabe/Scenes/TutorialScene.unity
     guid: 207467dd94483c54cbf123b3ac9529a3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Menber/watanabe/Scenes/MainScene.unity
     guid: 57c739818327ece4ea1c60d00fc13eb7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Menber/watanabe/Scenes/ResultScene.unity
     guid: 21e46305ab449c548a12cdf23117a174
-  - enabled: 1
-    path: Assets/Menber/Toriumi/Scenes/MainGimmickScene.unity
-    guid: 28361c25bac126d4c862523ee46e34db
-  - enabled: 1
-    path: Assets/Menber/Toriumi/Scenes/GameOverScene.unity
-    guid: cc0f3d9e72906f546abc8f373efd48fa
-  - enabled: 1
-    path: Assets/Menber/Toriumi/Scenes/ResultTestScene.unity
-    guid: d9227e5316a67a144bac75e05d5b985f
   m_configObjects: {}
