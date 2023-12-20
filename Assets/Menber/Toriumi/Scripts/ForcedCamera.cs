@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ForcedCamera : MonoBehaviour
 {
+    [SerializeField]
+    BossCatScript bossCat;
+
     // スクロールスピード
     public float ScrollSpeed = 1f;
 
@@ -18,16 +21,18 @@ public class ForcedCamera : MonoBehaviour
     {
         _position = new Vector2(_goaltile.transform.position.x, _goaltile.transform.position.y);
 
-        // 左強制なので-を付ける
-        if (_CmaraActive == true)
+        if(bossCat.BossCatHP >= 1)
         {
-            this.transform.position += new Vector3(-ScrollSpeed * Time.deltaTime, 0, 0);
-        }
+            // 左強制なので-を付ける
+            if (_CmaraActive == true)
+            {
+                this.transform.position += new Vector3(-ScrollSpeed * Time.deltaTime, 0, 0);
+            }
 
-        if (this.transform.position.x <= _position.x + 0.2f)
-        {
-            ScrollSpeed = 0f;
+            if (this.transform.position.x <= _position.x + 0.2f)
+            {
+                ScrollSpeed = 0f;
+            }
         }
-
     }
 }

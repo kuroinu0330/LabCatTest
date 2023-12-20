@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3813f4bd1f19d84a80dcbd3c004e212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossCat: {fileID: 1148552405}
   ScrollSpeed: 1
   _goaltile: {fileID: 1418050866}
 --- !u!1 &459848374
@@ -1767,7 +1768,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1422871327}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2594,7 +2595,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1422871327}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2614,8 +2615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.005
-  In: 1
-  Out: 0
+  In: 0
+  Out: 1
 --- !u!114 &955240990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,7 +2630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3039,6 +3040,7 @@ GameObject:
   - component: {fileID: 1148552404}
   - component: {fileID: 1148552403}
   - component: {fileID: 1148552408}
+  - component: {fileID: 1148552409}
   m_Layer: 0
   m_Name: BossCat
   m_TagString: Player
@@ -3107,11 +3109,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Channel: 0
   BossSpeed: 5
+  BossCatHP: 1
   xMaxLimit: 4.5
   yMaxLimit: 2
   xMinLimit: -8
   yMinLimit: -4.5
   LimitObject: {fileID: 547558760}
+  FadePanel: {fileID: 955240987}
 --- !u!212 &1148552406
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3213,6 +3217,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.96, y: 1.55}
   m_EdgeRadius: 0
+--- !u!95 &1148552409
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148552402}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb0408f5768c9cd4bb4fb8344d369ed3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &1169583023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3406,7 +3430,6 @@ GameObject:
   - component: {fileID: 1186830939}
   - component: {fileID: 1186830942}
   - component: {fileID: 1186830941}
-  - component: {fileID: 1186830940}
   m_Layer: 0
   m_Name: PanelGoalStone
   m_TagString: Untagged
@@ -3429,18 +3452,6 @@ Transform:
   m_Father: {fileID: 1215847810}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1186830940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186830938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54afb8a13975f7c4da8faacf6a8c1d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1186830941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4853,6 +4864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54afb8a13975f7c4da8faacf6a8c1d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadePanel: {fileID: 955240987}
 --- !u!61 &1418050869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5009,7 +5021,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1422871327
 RectTransform:
@@ -5023,8 +5035,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 547558761}
   - {fileID: 955240988}
+  - {fileID: 547558761}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7234,6 +7246,10 @@ PrefabInstance:
     - target: {fileID: 5479669268466714520, guid: ecba9f90208a50b408817317990daf5d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282055752299276692, guid: ecba9f90208a50b408817317990daf5d, type: 3}
+      propertyPath: m_Size.y
+      value: 7.86
       objectReference: {fileID: 0}
     - target: {fileID: 8596364878546741211, guid: ecba9f90208a50b408817317990daf5d, type: 3}
       propertyPath: m_RootOrder

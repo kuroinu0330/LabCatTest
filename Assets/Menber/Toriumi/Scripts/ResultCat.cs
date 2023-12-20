@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ResultCat : MonoBehaviour
 {
+    MobCatMg mobCat;
 
     // テスト 全体の猫を数えられる関数が必要
     [SerializeField]
@@ -15,6 +16,10 @@ public class ResultCat : MonoBehaviour
 
     [SerializeField] List<CatData> CatDatas;
 
+    private void Start()
+    {
+        catNum = mobCat.MobNum + 1;
+    }
     void Update()
     {
         CatResult();

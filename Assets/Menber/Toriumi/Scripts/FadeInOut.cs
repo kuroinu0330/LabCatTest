@@ -58,7 +58,6 @@ public class FadeInOut : MonoBehaviour
         if (alfa >= 1)
         {
             Out = false;
-            fadeImage.enabled = false;
         }
     }
 
