@@ -12,12 +12,6 @@ public class MobCatMg : MonoBehaviour
     //生成した子猫のリスト
     [SerializeField,Header("子猫のリスト")]
     public List<GameObject> MobCats = new List<GameObject>();
-    //特定の移動するためのポイント
-    [SerializeField, Header("猫向かうポイント1")]
-    public List<GameObject> PointObj1 = new List<GameObject>();
-    [SerializeField, Header("猫向かうポイント2")]
-    public List<GameObject> PointObj2 = new List<GameObject>();
-
     // private  -> public に変更 12/20 鳥海
     [SerializeField, Header("猫の数")]
     public int MobNum;
@@ -27,6 +21,11 @@ public class MobCatMg : MonoBehaviour
     private GameObject EmptyObject;
     [SerializeField]
     private GameObject BossCatPos;
+
+    [SerializeField]
+    public List<Transform> _pointPs1 = new List<Transform>();
+    [SerializeField]
+    public List<Transform> _pointPs2 = new List<Transform>();
     public void Start()
     {
     }

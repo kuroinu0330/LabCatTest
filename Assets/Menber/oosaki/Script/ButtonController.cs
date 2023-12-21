@@ -37,10 +37,10 @@ public class ButtonController : MonoBehaviour
         if (isCooldown)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(StartCooldown());
-        }
+        }*/
     }
 
     IEnumerator MoveObject(GameObject obj)

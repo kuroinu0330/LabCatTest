@@ -10,7 +10,7 @@ public class ResultSceneChange : MonoBehaviour
 
     [SerializeField]
     GameObject FadePanel;
-
+    [SerializeField]
     BossCatScript bossCat;
 
     float alpha = 1f;

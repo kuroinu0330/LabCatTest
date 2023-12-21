@@ -7,8 +7,6 @@ public class MobCat : MonoBehaviour
 {
     [SerializeField]
     MobCatMg mobCat;
-    /*[SerializeField]
-    Timer timer;*/
     //自由に動くスピード
     [SerializeField]
     private float FreeSpeed;
@@ -21,11 +19,6 @@ public class MobCat : MonoBehaviour
     //動かす猫指定
     [SerializeField]
     public int num;
-    //指定のobj
-    [SerializeField]
-    public int _PointObj1;
-    [SerializeField]
-    public int _PointObj2;
     public MobCatMove move;
     [SerializeField]
     private bool flag;
@@ -35,14 +28,20 @@ public class MobCat : MonoBehaviour
     private float _spanTime;
     [SerializeField, Header("ゲームスタート")]
     private bool isActive = false;
+    [SerializeField]
+    private GameObject _bossCatPs;
+    float viewX; // ビューポート座標のxの値
+    float viewY; // ビューポート座標のyの値
+    [SerializeField]
+    public int SleepPercent;
     //猫の行動
     public enum MobCatMove
     {
         Free,
         Gather,
-        Sleep,
+        _Sleep,
     }
-    void Update()
+    void FixedUpdate()
     {
         MobCatMoveState();
         //動作確認用のキーコード
@@ -53,10 +52,11 @@ public class MobCat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             move = MobCatMove.Free;
+
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            move = MobCatMove.Sleep;
+            move = MobCatMove._Sleep;
         }
     }
     //ステートメント駆動
@@ -66,30 +66,44 @@ public class MobCat : MonoBehaviour
         {
             case MobCatMove.Free:
                 RandomMove();
+                FreeSpeed = 4;
                 break;
             case MobCatMove.Gather:
                 GatherMove();
                 break;
-            case MobCatMove.Sleep:
+            case MobCatMove._Sleep:
                 SleepMove();
                 break;
         }
     }
+    private void Start()
+    {
+        Debug.Log("Screen Width : " + Screen.width);
+        Debug.Log("Screen  height: " + Screen.height);
+    }
     //一定の動きをする
     private void RandomMove()
     {
+        if (this.gameObject.transform.position == mobCat._pointPs1[num].transform.position)
+        {
+            flag = false;
+        }
+        if (this.gameObject.transform.position == mobCat._pointPs2[num].transform.position)
+        {
+            flag = true;
+        }
         if (isActive == true)
         {
             if (flag == true)
             {
                 transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
-                                                         mobCat.PointObj1[_PointObj1].transform.position,
+                                                         mobCat._pointPs1[num].transform.position,
                                                          FreeSpeed * Time.deltaTime);
             }
             else
             {
                 transform.position = Vector3.MoveTowards(mobCat.MobCats[num].transform.position,
-                                                         mobCat.PointObj2[_PointObj2].transform.position,
+                                                         mobCat._pointPs2[num].transform.position,
                                                          FreeSpeed * Time.deltaTime);
             }
         }
@@ -113,21 +127,20 @@ public class MobCat : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D　other)
-    {
-        if (other.gameObject == mobCat.PointObj1[_PointObj1])
-        {
-            flag = false;
-        }
-        else if (other.gameObject == mobCat.PointObj2[_PointObj2])
-        {
-            flag = true;
-        }
-    }
     private void SleepMove()
     {
+        FreeSpeed = 0;
         //毛づくろいのアニメションをStart
 
+        //画面外判定
+        viewX = Camera.main.WorldToViewportPoint(this.gameObject.transform.position).x;
+        viewY = Camera.main.WorldToViewportPoint(this.gameObject.transform.position).y;
+        if (0 <= viewX && viewX >= 1 || 0 <= viewY && viewY >= 1)
+        {
+            Debug.Log("でた");
+            move = MobCatMove.Free;
+            FreeSpeed = 4;
+        }
     }
 
     /// <summary>
@@ -140,10 +153,10 @@ public class MobCat : MonoBehaviour
         {
             int Ran = Random.Range(0, 100);
             Debug.Log(Ran);
-            if (Ran < 10)
+            if (Ran < SleepPercent)
             {
                 Debug.Log("削黒い");
-                move.HasFlag(MobCatMove.Sleep);
+                move = MobCatMove._Sleep;
             }
             _currentTime = 0;
         }
