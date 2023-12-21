@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using static MobCat; 
 
 public class MobCat : MonoBehaviour
@@ -34,6 +36,8 @@ public class MobCat : MonoBehaviour
     float viewY; // ビューポート座標のyの値
     [SerializeField]
     public int SleepPercent;
+
+    private Animator anim;
     //猫の行動
     public enum MobCatMove
     {
@@ -67,6 +71,7 @@ public class MobCat : MonoBehaviour
             case MobCatMove.Free:
                 RandomMove();
                 FreeSpeed = 4;
+                anim.SetBool("SleepBool", false);
                 break;
             case MobCatMove.Gather:
                 GatherMove();
@@ -78,6 +83,7 @@ public class MobCat : MonoBehaviour
     }
     private void Start()
     {
+        anim = GetComponent<Animator>();
         Debug.Log("Screen Width : " + Screen.width);
         Debug.Log("Screen  height: " + Screen.height);
     }
@@ -114,24 +120,25 @@ public class MobCat : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
         //トラップに当たると消える
-        if (other.gameObject.CompareTag("Trap1"))
+        if (collision.gameObject.CompareTag("Trap"))
         {
-            Destroy(this.gameObject);
+            FreeSpeed = 0;
+            anim.SetBool("DeathBool", true);
+            Invoke("CatDestroy", 1.3f);
         }
-        //トラップに当たると消える
-        if (other.gameObject.CompareTag("Trap2"))
-        {
-            Destroy(this.gameObject);
-        }
+    }
+    private void CatDestroy()
+    {
+        Destroy(mobCat.MobCats[num]);
     }
     private void SleepMove()
     {
         FreeSpeed = 0;
         //毛づくろいのアニメションをStart
-
+        anim.SetBool("SleepBool",true);
         //画面外判定
         viewX = Camera.main.WorldToViewportPoint(this.gameObject.transform.position).x;
         viewY = Camera.main.WorldToViewportPoint(this.gameObject.transform.position).y;
@@ -139,6 +146,7 @@ public class MobCat : MonoBehaviour
         {
             Debug.Log("でた");
             move = MobCatMove.Free;
+            anim.SetBool("SleepBool", false);
             FreeSpeed = 4;
         }
     }

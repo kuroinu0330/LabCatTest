@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 69825864}
   m_Layer: 0
   m_Name: MobCat (11)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &69825867
 Rigidbody2D:
   serializedVersion: 4
@@ -443,7 +443,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -596,7 +596,6 @@ GameObject:
   - component: {fileID: 116331751}
   - component: {fileID: 116331754}
   - component: {fileID: 116331753}
-  - component: {fileID: 116331752}
   m_Layer: 0
   m_Name: PanelGoal
   m_TagString: Untagged
@@ -619,20 +618,6 @@ Transform:
   m_Father: {fileID: 336598803}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &116331752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116331750}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54afb8a13975f7c4da8faacf6a8c1d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadePanel: {fileID: 0}
-  bossCat: {fileID: 0}
 --- !u!61 &116331753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2961,7 +2946,7 @@ GameObject:
   - component: {fileID: 613033793}
   m_Layer: 0
   m_Name: MobCat (9)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3035,7 +3020,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &613033796
 Rigidbody2D:
   serializedVersion: 4
@@ -3097,7 +3082,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4288,57 +4273,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &835943560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 835943562}
-  - component: {fileID: 835943561}
-  m_Layer: 0
-  m_Name: MapTipMG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &835943561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835943560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b6d71a4b532d24cb180a1a52760136, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayResolution: {x: 1920, y: 1080}
-  TileBasePrefab: {fileID: 1191818522814183429, guid: cdfb21cfe4f27fa4689d0e7b241a4ad5, type: 3}
-  _mapTiles: []
-  _mapTileTextures: []
-  _centerCoordinateNum: {x: 1, y: 1}
-  _enteredTriggers: []
-  _tileMoveCount: 0
---- !u!4 &835943562
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835943560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9912764, y: 2.0084603, z: 0.70132214}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845036840
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,7 +4656,7 @@ GameObject:
   - component: {fileID: 903225679}
   m_Layer: 0
   m_Name: MobCat (8)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4803,7 +4737,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4838,7 +4772,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!61 &903225678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5472,11 +5406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084989710758015763, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 3084989710758015763, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.72
       objectReference: {fileID: 0}
     - target: {fileID: 3084989710758015763, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5520,7 +5454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8450336483804421138, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
@@ -5670,7 +5604,7 @@ GameObject:
   - component: {fileID: 1020123796}
   m_Layer: 0
   m_Name: MobCat (13)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5744,7 +5678,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &1020123799
 Rigidbody2D:
   serializedVersion: 4
@@ -5806,7 +5740,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6370,7 +6304,7 @@ GameObject:
   - component: {fileID: 1140211079}
   m_Layer: 0
   m_Name: MobCat (14)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6444,7 +6378,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &1140211082
 Rigidbody2D:
   serializedVersion: 4
@@ -6506,7 +6440,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8095,7 +8029,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446420231}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54afb8a13975f7c4da8faacf6a8c1d14, type: 3}
   m_Name: 
@@ -9072,7 +9006,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.55}
+  m_Size: {x: 1.59, y: 0.98}
   m_EdgeRadius: 0
 --- !u!114 &1662722612
 MonoBehaviour:
@@ -9463,7 +9397,7 @@ MonoBehaviour:
   - {fileID: 1020123795}
   - {fileID: 1140211078}
   - {fileID: 1898889395}
-  MobNum: 0
+  MobNum: 8
   EmptyObject: {fileID: 0}
   BossCatPos: {fileID: 0}
   _pointPs1:
@@ -9641,7 +9575,7 @@ GameObject:
   - component: {fileID: 1898889397}
   m_Layer: 0
   m_Name: MobCat (15)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9730,7 +9664,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &1898889400
 Rigidbody2D:
   serializedVersion: 4
@@ -9792,7 +9726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10196,7 +10130,7 @@ GameObject:
   - component: {fileID: 1992385098}
   m_Layer: 0
   m_Name: MobCat (10)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10270,7 +10204,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &1992385101
 Rigidbody2D:
   serializedVersion: 4
@@ -10332,7 +10266,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10374,7 +10308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2021072825
 Transform:
   m_ObjectHideFlags: 0
@@ -10654,7 +10588,7 @@ GameObject:
   - component: {fileID: 2142836576}
   m_Layer: 0
   m_Name: MobCat (12)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10728,7 +10662,7 @@ MonoBehaviour:
   _spanTime: 5
   isActive: 1
   _bossCatPs: {fileID: 1662722606}
-  SleepPercent: 20
+  SleepPercent: 10
 --- !u!50 &2142836579
 Rigidbody2D:
   serializedVersion: 4
@@ -10790,7 +10724,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8deb58c21f45d14681bb25fa1bbfbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

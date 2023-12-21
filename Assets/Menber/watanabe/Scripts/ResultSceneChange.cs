@@ -22,7 +22,7 @@ public class ResultSceneChange : MonoBehaviour
 
     private void Update()
     {
-        ResultScene();
+        //ResultScene();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +30,7 @@ public class ResultSceneChange : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             FadePanel.SetActive(true);
+            ResultScene();
         }
     }
 
@@ -38,7 +39,6 @@ public class ResultSceneChange : MonoBehaviour
         if(bossCat.BossCatHP > 0)
         {
             if (FadePanel.GetComponent<Image>().color.a >= alpha)
-
             {
                 // ŒÂX‚¾‚¯•ÏX‚È‚µ
                 SceneManager.LoadScene("ResultScene");
