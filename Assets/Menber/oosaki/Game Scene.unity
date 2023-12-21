@@ -1257,7 +1257,7 @@ MonoBehaviour:
   - {fileID: 163699567}
   targetObject: {fileID: 841447429}
   moveSpeed: 5
-  cooldownTime: 2
+  cooldownTime: 4
   inactiveSprite: {fileID: 21300000, guid: a02af9e1012defa41adfb0808abbdffb, type: 3}
   activeSprite: {fileID: 21300000, guid: 5e27d0ba3b99e52498ba1456a6ed3164, type: 3}
   cooldownImage: {fileID: 1724673890}
