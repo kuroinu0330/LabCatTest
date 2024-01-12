@@ -8,6 +8,7 @@ using static SoundManagerTest;
 public class BossCatScript : MonoBehaviour
 {
     Animator anim;
+    Rigidbody2D rig;
 
     [SerializeField, Header("チャンネル")]
     private int _Channel;
@@ -61,6 +62,7 @@ public class BossCatScript : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        rig = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -105,6 +107,12 @@ public class BossCatScript : MonoBehaviour
         {
             // ほぼ等速で動く
             transform.position = Vector2.MoveTowards(transform.position, BossMovePos, BossSpeed * Time.deltaTime);
+            anim.SetBool("RanOn", true);
+        }
+
+        if(rig.IsSleeping())
+        {
+            anim.SetBool("RanOn", false);
         }
     }
 
