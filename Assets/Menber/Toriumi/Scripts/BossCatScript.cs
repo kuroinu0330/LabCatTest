@@ -96,7 +96,7 @@ public class BossCatScript : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(BossMovePos);
+            // Debug.Log(BossMovePos);
         }
 
         // 範囲制限 この中で押さなければ反応しない
@@ -119,6 +119,11 @@ public class BossCatScript : MonoBehaviour
         if(collision.tag == ("Energy"))
         {
             EnergyFlag = true;
+        }
+
+        if(collision.tag == "Limit")
+        {
+            BossCatHP = 0;
         }
     }
 

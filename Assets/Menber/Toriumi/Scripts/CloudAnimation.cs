@@ -17,7 +17,6 @@ public class CloudAnimation : MonoBehaviour
     int c_Start = 18;
     int c_Finish = -18;
 
-    RectTransform rect;
     private void Start()
     {
         CloudStart.x = c_Start;

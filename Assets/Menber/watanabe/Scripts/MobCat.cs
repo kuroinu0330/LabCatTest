@@ -184,7 +184,7 @@ public class MobCat : MonoBehaviour
         if (_currentTime > _spanTime)
         {
             int Ran = Random.Range(0, 100);
-            Debug.Log(Ran);
+            // Debug.Log(Ran);
             if (Ran < SleepPercent)
             {
                 Debug.Log("í•‚¢");
