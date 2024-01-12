@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using static MobCatMg;
+using UnityEngine.UI;
 
 public class MobCatMg : MonoBehaviour
 {
@@ -26,11 +27,31 @@ public class MobCatMg : MonoBehaviour
     public List<Transform> _pointPs1 = new List<Transform>();
     [SerializeField]
     public List<Transform> _pointPs2 = new List<Transform>();
+
+    [SerializeField]
+    public int CatCount;
+    [SerializeField]
+    public Text CatCountText;
     public void Start()
     {
+        CatCount = 7;
+    }
+    public static MobCatMg instance;
+    public void Awake()
+    {
+        // インスタンスが定義されていない時に以下の処理を実行
+        if (instance == null)
+        {
+            // インスタンスを更新
+            instance = this;
+
+            // シーン間を持ち越す用に保護
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
     public void Update()
     {
+        CatCountText.text = CatCount.ToString();
        //Invoke("CreateCat",1.0f);
     }
     private void CreateCat()

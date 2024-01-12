@@ -38,6 +38,13 @@ public class MobCat : MonoBehaviour
     public int SleepPercent;
 
     private Animator anim;
+
+    [SerializeField]
+    private int CatKeyCount;
+    [SerializeField, Header("開始時間")]
+    private float _CatcurrentTime;
+    [SerializeField, Header("何秒間にするか")]
+    private float _CatspanTime;
     //猫の行動
     public enum MobCatMove
     {
@@ -51,7 +58,11 @@ public class MobCat : MonoBehaviour
         //動作確認用のキーコード
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            move = MobCatMove.Gather;
+            CatKeyCount++;
+            if (CatKeyCount == 1)
+            {
+                move = MobCatMove.Gather;
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -118,7 +129,18 @@ public class MobCat : MonoBehaviour
     /*Bossに向かう*/
     private void GatherMove()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
+        _CatcurrentTime += Time.deltaTime;
+        if (_CatcurrentTime < _CatspanTime)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, GetherSpeed * Time.deltaTime);
+        }
+        else if (_CatcurrentTime > _CatspanTime)
+        {
+            move = MobCatMove.Free;
+            _CatcurrentTime = 0;
+            CatKeyCount = 0;
+        }
+
     }
     private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
@@ -126,7 +148,9 @@ public class MobCat : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             FreeSpeed = 0;
+            mobCat.CatCount--;
             anim.SetBool("DeathBool", true);
+            mobCat.MobCats.Remove(collision.gameObject);
             Invoke("CatDestroy", 1.3f);
         }
     }

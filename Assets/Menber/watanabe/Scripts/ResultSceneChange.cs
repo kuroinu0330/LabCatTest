@@ -36,13 +36,15 @@ public class ResultSceneChange : MonoBehaviour
 
     public void ResultScene()
     {
-        if(bossCat.BossCatHP > 0)
-        {
-            if (FadePanel.GetComponent<Image>().color.a >= alpha)
+            /*if (FadePanel.GetComponent<Image>().color.a >= alpha)
             {
                 // ŒÂX‚¾‚¯•ÏX‚È‚µ
                 SceneManager.LoadScene("ResultScene");
-            }
-        }
+            }*/
+        /*if(bossCat.BossCatHP > 0)
+        {
+
+        }*/
+        SceneManager.LoadScene("ResultScene");
     }
 }
