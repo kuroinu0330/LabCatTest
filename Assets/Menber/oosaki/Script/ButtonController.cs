@@ -9,7 +9,7 @@ public class ButtonController : MonoBehaviour
     public List<GameObject> objectsToMove;
     public GameObject targetObject;
     public float moveSpeed = 5f;
-    public float cooldownTime = 4f;
+    public float cooldownTime = 3f;
 
     public Sprite inactiveSprite;
     public Sprite activeSprite;
