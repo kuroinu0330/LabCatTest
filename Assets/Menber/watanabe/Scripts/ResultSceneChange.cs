@@ -38,7 +38,7 @@ public class ResultSceneChange : MonoBehaviour
     {
             /*if (FadePanel.GetComponent<Image>().color.a >= alpha)
             {
-                // ŒÂX‚¾‚¯•ÏX‚È‚µ
+                // ‚±‚±‚¾‚¯•ÏX‚È‚µ
                 SceneManager.LoadScene("ResultScene");
             }*/
         /*if(bossCat.BossCatHP > 0)
