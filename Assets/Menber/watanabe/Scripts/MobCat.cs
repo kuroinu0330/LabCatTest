@@ -125,6 +125,7 @@ public class MobCat : MonoBehaviour
             }
         }
         Sleep();
+        MobCatsOverlapping();
     }
     /*BossÇ…å¸Ç©Ç§*/
     private void GatherMove()
@@ -192,5 +193,12 @@ public class MobCat : MonoBehaviour
             }
             _currentTime = 0;
         }
+    }
+    /// <summary>
+    /// ÉÇÉuîLÇ™èdÇ»ÇÁÇ»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
+    /// </summary>
+    private void MobCatsOverlapping()
+    {
+
     }
 }
