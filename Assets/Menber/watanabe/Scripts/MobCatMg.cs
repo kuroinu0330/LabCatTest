@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using static MobCatMg;
 using UnityEngine.UI;
 
 public class MobCatMg : MonoBehaviour
@@ -51,7 +50,7 @@ public class MobCatMg : MonoBehaviour
     }
     public void Update()
     {
-        CatCountText.text = CatCount.ToString();
+        //CatCountText.text = CatCount.ToString();
         if (_pointPs1 == null) return;
         if (_pointPs2 == null) return;
         if (MobCats == null) return;

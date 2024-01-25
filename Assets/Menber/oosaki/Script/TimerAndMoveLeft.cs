@@ -10,7 +10,7 @@ public class TimerAndMoveLeft : MonoBehaviour
     private float initialPositionX; // オブジェクトの初期X座標
     [SerializeField]
     private float moveDistance; // 初期位置から目標位置までの距離
-    private float timer = 5.0f; // 移動時間
+    private float timer = 80.0f; // 移動時間
 
     void Start()
     {

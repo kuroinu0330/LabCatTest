@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using static MobCat;
 using static SoundManagerTest;
+using static ButtonController;
 
 public class MobCat : MonoBehaviour
 {
@@ -64,14 +65,15 @@ public class MobCat : MonoBehaviour
         MobCatCV();
         MobCatMoveState();
         //動作確認用のキーコード
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (ButtonController.instance.isCooldown == true)
         {
-            CatKeyCount++;
-            if (CatKeyCount == 1)
-            {
-                move = MobCatMove.Gather;
-            }
+            move = MobCatMove.Gather;
         }
+        else
+        {
+            move = MobCatMove.Free;
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             move = MobCatMove.Free;

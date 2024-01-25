@@ -16,7 +16,7 @@ public class ButtonController : MonoBehaviour
     public float moveSpeed = 5f;
 
     // クールダウン時間
-    public float cooldownTime = 3f;
+    public float cooldownTime = 8f;
 
     // ボタンが非アクティブな時のスプライト
     public Sprite inactiveSprite;
@@ -28,14 +28,26 @@ public class ButtonController : MonoBehaviour
     public Image cooldownImage;
 
     // オブジェクトのスプライトを格納するための配列
+    [SerializeField]
     private Image[] objectImages;
 
     // クールダウン中かどうかを示すフラグ
-    private bool isCooldown = false;
+    public bool isCooldown = false;
+
 
     // クールダウンが終了したかどうかのフラグ
     private bool cooldownEnded = false;
-
+    //インスタンス化を記入　by渡邉
+    public static ButtonController instance;
+    private void Awake()
+    {
+        // インスタンスが定義されていない時に以下の処理を実行
+        if (instance == null)
+        {
+            // インスタンスを更新
+            instance = this;
+        }
+    }
     // インスタンスが生成されたときに最初に呼ばれるメソッド
     private void Start()
     {
@@ -72,20 +84,10 @@ public class ButtonController : MonoBehaviour
             // クールダウンを開始
             StartCoroutine(StartCooldown());
         }
-
-        
-       
-
-        // マウスの左ボタンがクリックされたとき
-        //if (Input.GetMouseButtonDown(0))
-        {
-            // クールダウンを開始
-            //StartCoroutine(StartCooldown());
-        }
     }
 
     // オブジェクトを移動するコルーチン
-    IEnumerator MoveObject(GameObject obj)
+    /*IEnumerator MoveObject(GameObject obj)
     {
         // オブジェクトがターゲットに到達するまで繰り返す
         while (Vector3.Distance(obj.transform.position, targetObject.transform.position) > 0.1f)
@@ -93,7 +95,7 @@ public class ButtonController : MonoBehaviour
             obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetObject.transform.position, moveSpeed * Time.deltaTime);
             yield return null;
         }
-    }
+    }*/
 
     // クールダウンを開始するコルーチン
     IEnumerator StartCooldown()
@@ -115,7 +117,6 @@ public class ButtonController : MonoBehaviour
 
         // クールダウンの経過時間を計測するタイマー
         float timer = 0f;
-
         // クールダウン時間まで繰り返す
         while (timer < cooldownTime)
         {
