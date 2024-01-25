@@ -1688,6 +1688,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &385374610
 Rigidbody2D:
   serializedVersion: 4
@@ -2359,6 +2361,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &712676545
 Rigidbody2D:
   serializedVersion: 4
@@ -2556,6 +2560,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &729210175
 Rigidbody2D:
   serializedVersion: 4
@@ -2737,7 +2743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763776638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2970006, y: -0.43399996, z: -1}
+  m_LocalPosition: {x: -149.103, y: -0.43399996, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4064,6 +4070,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &1088286164
 Rigidbody2D:
   serializedVersion: 4
@@ -5146,6 +5154,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &1358496917
 Rigidbody2D:
   serializedVersion: 4
@@ -6975,7 +6985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717555851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0, z: -100}
+  m_LocalPosition: {x: -152.6, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8567,6 +8577,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &2030410215
 Rigidbody2D:
   serializedVersion: 4
@@ -8994,7 +9006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115673173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: -1.06, z: -1}
+  m_LocalPosition: {x: -150.6, y: -1.06, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9403,6 +9415,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &2137378871
 Rigidbody2D:
   serializedVersion: 4

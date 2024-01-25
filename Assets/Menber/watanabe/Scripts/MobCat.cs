@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using static MobCat; 
+using static MobCat;
+using static SoundManagerTest;
 
 public class MobCat : MonoBehaviour
 {
@@ -45,6 +46,12 @@ public class MobCat : MonoBehaviour
     private float _CatcurrentTime;
     [SerializeField, Header("何秒間にするか")]
     private float _CatspanTime;
+
+    [SerializeField]
+    private List<GameObject> _mobCatCenter = new List<GameObject>();
+    // 円の半径を設定します。
+    [SerializeField]
+    private float radius = 2f;
     //猫の行動
     public enum MobCatMove
     {
@@ -54,6 +61,7 @@ public class MobCat : MonoBehaviour
     }
     void FixedUpdate()
     {
+        MobCatCV();
         MobCatMoveState();
         //動作確認用のキーコード
         if (Input.GetKeyDown(KeyCode.Q))
@@ -125,7 +133,6 @@ public class MobCat : MonoBehaviour
             }
         }
         Sleep();
-        MobCatsOverlapping();
     }
     /*Bossに向かう*/
     private void GatherMove()
@@ -153,6 +160,10 @@ public class MobCat : MonoBehaviour
             anim.SetBool("DeathBool", true);
             mobCat.MobCats.Remove(collision.gameObject);
             Invoke("CatDestroy", 1.3f);
+        }
+        if (collision.gameObject.CompareTag("MobCat"))
+        {
+            MobCatsOverlapping();
         }
     }
     private void CatDestroy()
@@ -184,6 +195,41 @@ public class MobCat : MonoBehaviour
         _currentTime += Time.deltaTime;
         if (_currentTime > _spanTime)
         {
+            int Ran = Random.Range(0, 10);
+            // Debug.Log(Ran);
+            switch(Ran)
+            {
+                case 0:
+                    SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 0);
+                    _currentTime = 0;
+                    break;
+                case 1:
+                    SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 1);
+                    _currentTime = 0;
+                    break;
+                case 2:
+                    SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 2);
+                    _currentTime = 0;
+                    break;
+                case 3:
+                    SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 3);
+                    _currentTime = 0;
+                    break;
+                case 4:
+                    SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 4);
+                    _currentTime = 0;
+                    break;
+            }
+            _currentTime = 0;
+
+            
+        }
+    }
+    private void MobCatCV()
+    {
+        _currentTime += Time.deltaTime;
+        if (_currentTime > _spanTime)
+        {
             int Ran = Random.Range(0, 100);
             // Debug.Log(Ran);
             if (Ran < SleepPercent)
@@ -199,6 +245,9 @@ public class MobCat : MonoBehaviour
     /// </summary>
     private void MobCatsOverlapping()
     {
-
+        for (int i = 0; i < 7; i++)
+        {
+            
+        }
     }
 }

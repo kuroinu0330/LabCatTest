@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 69825864}
   m_Layer: 0
   m_Name: MobCat (11)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,6 +385,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &69825867
 Rigidbody2D:
   serializedVersion: 4
@@ -2870,7 +2872,7 @@ GameObject:
   - component: {fileID: 613033793}
   m_Layer: 0
   m_Name: MobCat (9)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2948,6 +2950,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &613033796
 Rigidbody2D:
   serializedVersion: 4
@@ -4410,7 +4414,7 @@ GameObject:
   - component: {fileID: 903225679}
   m_Layer: 0
   m_Name: MobCat (8)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4530,6 +4534,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!61 &903225678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5260,7 +5266,7 @@ GameObject:
   - component: {fileID: 1020123796}
   m_Layer: 0
   m_Name: MobCat (13)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5338,6 +5344,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &1020123799
 Rigidbody2D:
   serializedVersion: 4
@@ -5984,7 +5992,7 @@ GameObject:
   - component: {fileID: 1140211079}
   m_Layer: 0
   m_Name: MobCat (14)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6062,6 +6070,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &1140211082
 Rigidbody2D:
   serializedVersion: 4
@@ -9161,7 +9171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _seVolume
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _bgmVolume
@@ -9612,7 +9622,7 @@ GameObject:
   - component: {fileID: 1992385098}
   m_Layer: 0
   m_Name: MobCat (10)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9690,6 +9700,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &1992385101
 Rigidbody2D:
   serializedVersion: 4
@@ -10071,7 +10083,7 @@ GameObject:
   - component: {fileID: 2142836576}
   m_Layer: 0
   m_Name: MobCat (12)
-  m_TagString: Untagged
+  m_TagString: MobCat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10149,6 +10161,8 @@ MonoBehaviour:
   CatKeyCount: 0
   _CatcurrentTime: 0
   _CatspanTime: 4
+  _mobCatCenter: []
+  radius: 2
 --- !u!50 &2142836579
 Rigidbody2D:
   serializedVersion: 4

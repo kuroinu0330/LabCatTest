@@ -52,6 +52,9 @@ public class MobCatMg : MonoBehaviour
     public void Update()
     {
         CatCountText.text = CatCount.ToString();
+        if (_pointPs1 == null) return;
+        if (_pointPs2 == null) return;
+        if (MobCats == null) return;
        //Invoke("CreateCat",1.0f);
     }
     private void CreateCat()
