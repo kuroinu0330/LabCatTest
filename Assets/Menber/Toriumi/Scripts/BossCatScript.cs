@@ -177,6 +177,7 @@ public class BossCatScript : MonoBehaviour
         if (BossCatHP == 0)
         {
             anim.SetBool("DeathOn", true);
+            Debug.Log("死亡確認");
         }
     }
 
@@ -184,6 +185,7 @@ public class BossCatScript : MonoBehaviour
     public void FadeOut()
     {
         FadePanel.SetActive(true);
+        Debug.Log("フェード開始");
     }
 
     // フェード後のシーンチェンジ
@@ -191,7 +193,7 @@ public class BossCatScript : MonoBehaviour
     {
         if (FadePanel.GetComponent<Image>().color.a >= alpha)
         {
-            Debug.Log("clear");
+            Debug.Log("ゲームオーバー");
             SceneManager.LoadScene("GameOverScene");
         }
     }

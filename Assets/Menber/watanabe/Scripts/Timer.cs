@@ -9,30 +9,38 @@ public class Timer : MonoBehaviour
     public float gameTime;
 
     private bool stopTimer;
-
+    [SerializeField]
+    public bool startTimer = false;
     private void Start()
     {
-        stopTimer = false;
-        timerSlider.maxValue = gameTime;
-        timerSlider.value = gameTime;
+        startTimer = true;
+        if (startTimer == true)
+        {
+            stopTimer = false;
+            timerSlider.maxValue = gameTime;
+            timerSlider.value = gameTime;
+        }
     }
-
     private void Update()
     {
-        float time = gameTime - Time.time;
-
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time - minutes * 60f);
-
-        if (time <= 0)
+        if (startTimer == true)
         {
-            stopTimer = true;
+            float time = gameTime - Time.time;
+
+            int minutes = Mathf.FloorToInt(time / 60);
+            int seconds = Mathf.FloorToInt(time - minutes * 60f);
+
+            if (time <= 0)
+            {
+                stopTimer = true;
+            }
+
+            if (stopTimer == false)
+            {
+                timerSlider.value = time;
+            }
         }
 
-        if (stopTimer == false)
-        {
-            timerSlider.value = time;
-        }
     }
 }
 

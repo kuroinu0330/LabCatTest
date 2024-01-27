@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Menber/watanabe/Scenes/ResultScene.unity
     guid: 21e46305ab449c548a12cdf23117a174
   - enabled: 1
-    path: Assets/Menber/Toriumi/Scenes/GameOverScene.unity
+    path: Assets/Menber/Toriumi/Resources/Scenes/GameOverScene.unity
     guid: cc0f3d9e72906f546abc8f373efd48fa
   m_configObjects: {}

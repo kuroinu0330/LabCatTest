@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using static ButtonController;
+using static Timer;
 public class DoorGimmick : MonoBehaviour
 {
+    //切り替えるimage
     [SerializeField]
     public Sprite newSprite;
+    //現在入れているimage
     [SerializeField]
     public Sprite nowSprite;
     private Image image;
@@ -16,24 +19,30 @@ public class DoorGimmick : MonoBehaviour
     public Door door;
     private void Start()
     {
+        //アニメターのコンポーネント
         anim = gameObject.GetComponent<Animator>();
+        //イメージコンポーネント
         image = GetComponent<Image>();
     }
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (ButtonController.instance.isCooldown == true)
         {
-            Debug.Log("領域展開");
-            image.sprite = newSprite;
-            //anim.SetBool("DoorBool", true);
-            door.DoorMove();
-            Invoke("SceneChange", 3.0f);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                image.sprite = newSprite;
+                //anim.SetBool("DoorBool", true);
+                door.DoorMove();
+                Invoke("SceneChange", 3.0f);
+              
+            }
+            else
+            {
+                image.sprite = nowSprite;
+            }
         }
-        else
-        {
-            image.sprite = nowSprite;
-        }
+
     }
     private void SceneChange()
     {
