@@ -7,6 +7,9 @@ public class ForcedCamera : MonoBehaviour
     [SerializeField]
     BossCatScript bossCat;
 
+    [SerializeField]
+    FadeInOut fade;
+
     // スクロールスピード
     public float ScrollSpeed = 1f;
 
@@ -15,7 +18,17 @@ public class ForcedCamera : MonoBehaviour
     [SerializeField]
     private GameObject _goaltile;
 
+    [SerializeField]
+    GameObject FadePanel;
+
     private Vector2 _position;
+
+
+    private void Start()
+    {
+        FadePanel.SetActive(true);
+        fade.In = true;
+    }
 
     void Update()
     {

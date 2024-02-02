@@ -34,7 +34,10 @@ public class DoorGimmick : MonoBehaviour
                 image.sprite = newSprite;
                 //anim.SetBool("DoorBool", true);
                 door.DoorMove();
-                Invoke("SceneChange", 3.0f);
+
+                // •ÏX 2/1 ’¹ŠC
+                // •b” 3f -> 4f •ÏX
+                Invoke("SceneChange", 4.0f);
               
             }
             else

@@ -58,6 +58,8 @@ public class BossCatScript : MonoBehaviour
     // 仮トラップ
     bool TrapFlag = false;
 
+    [SerializeField]
+    FadeInOut fade;
 
     private void Start()
     {
@@ -185,6 +187,7 @@ public class BossCatScript : MonoBehaviour
     public void FadeOut()
     {
         FadePanel.SetActive(true);
+        fade.Out = true;
         Debug.Log("フェード開始");
     }
 

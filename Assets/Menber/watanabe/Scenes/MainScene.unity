@@ -2692,12 +2692,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 465390404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3813f4bd1f19d84a80dcbd3c004e212, type: 3}
+  m_Script: {fileID: 11500000, guid: 03dfe39cced942e42bf5f731b183fa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bossCat: {fileID: 1662722609}
-  ScrollSpeed: 2
-  _goaltile: {fileID: 1258792701}
+  fade: {fileID: 1657315996}
+  ScrollSpeed: 1
+  _goaltile: {fileID: 116331750}
+  FadePanel: {fileID: 1657315994}
 --- !u!4 &493873932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3084989710758015763, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
@@ -4946,7 +4948,7 @@ Transform:
   - {fileID: 1541851269}
   - {fileID: 1481349885}
   m_Father: {fileID: 1694973569}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1002187754
 Animator:
@@ -5318,7 +5320,7 @@ RectTransform:
   - {fileID: 829557008}
   - {fileID: 561549713}
   m_Father: {fileID: 1694973569}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6563,7 +6565,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1694973569}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8158,13 +8160,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567599828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 780.77, y: 703, z: 0}
+  m_LocalPosition: {x: 780.77, y: 703, z: 100}
   m_LocalScale: {x: 100.000435, y: 100.000435, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1182324715}
   m_Father: {fileID: 1694973569}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1567599830
 Animator:
@@ -8226,7 +8228,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2063803845, guid: 62eee4231c38d7e418f67eefc449c883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8423,7 +8425,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657315994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10000}
   m_LocalScale: {x: 1.00008, y: 1.00008, z: 1.00008}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8432,7 +8434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0052490234, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657315996
@@ -8449,7 +8451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 0.005
   In: 0
-  Out: 1
+  Out: 0
 --- !u!114 &1657315997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8463,7 +8465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8549,7 +8551,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 536e8e6f1df908f43a97358191816090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8569,7 +8571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662722606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2, y: -1.06, z: -1}
+  m_LocalPosition: {x: 2.2, y: -1.06, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8604,6 +8606,7 @@ MonoBehaviour:
   yMinLimit: -4.5
   LimitObject: {fileID: 180379892}
   FadePanel: {fileID: 1657315994}
+  fade: {fileID: 1657315996}
 --- !u!50 &1662722610
 Rigidbody2D:
   serializedVersion: 4
@@ -8797,10 +8800,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1567599829}
   - {fileID: 1002187753}
   - {fileID: 1047160722}
   - {fileID: 1192095030}
-  - {fileID: 1567599829}
   - {fileID: 1087506122}
   - {fileID: 130947540}
   - {fileID: 976536396}

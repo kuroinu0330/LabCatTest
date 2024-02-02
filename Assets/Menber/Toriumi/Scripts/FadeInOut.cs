@@ -27,12 +27,12 @@ public class FadeInOut : MonoBehaviour
     // test
     void Update()
     {
-        if(In)
+        if (In)
         {
             FadeIn();
         }
 
-        if(Out)
+        if (Out)
         {
             FadeOut();
         }
@@ -46,7 +46,7 @@ public class FadeInOut : MonoBehaviour
         if(alfa <= 0)
         {
             In = false;
-            fadeImage.enabled = false;
+            this.gameObject.SetActive(false);
         }
     }
 
