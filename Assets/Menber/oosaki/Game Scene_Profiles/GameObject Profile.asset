@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4881921717916615739
+--- !u!114 &-7633951590894716807
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17,23 +17,23 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   mode:
-    overrideState: 0
+    overrideState: 1
     value: 0
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
   center:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.9
   smoothness:
     overrideState: 1
-    value: 1
+    value: 0.942
   roundness:
     overrideState: 1
-    value: 1
+    value: 0.555
   rounded:
     overrideState: 0
     value: 0
@@ -57,4 +57,4 @@ MonoBehaviour:
   m_Name: GameObject Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: -4881921717916615739}
+  - {fileID: -7633951590894716807}
