@@ -21,5 +21,10 @@ public class MovieScript : MonoBehaviour
         SceneManager.LoadScene("TitleSnTs");
     }
 
+    public void SkipButton()
+    {
+        SceneManager.LoadScene("TitleSnTs");
+    }
+
 
 }
