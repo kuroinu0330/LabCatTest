@@ -729,7 +729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b0ac6e43e36b1c649b5c3776847b3049, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c26a5863a1d1804d99d7b1dbc7ee20d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -795,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &398208313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.BGM.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioSorces._soundManager
@@ -936,7 +936,15 @@ PrefabInstance:
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.BGM.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: be28bcea6b179d245b117c48be7f39b9, type: 3}
+      objectReference: {fileID: 8300000, guid: 12316490035a8dd4394a3f4064df9207, type: 3}
+    - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
+      propertyPath: _audioClips.BGM.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8fe6c2a40fe9b9746bc0137829bf3d14, type: 3}
+    - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
+      propertyPath: _audioClips.BGM.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 635b6ea7dce84a841be65f847cc4109d, type: 3}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.SE.SYSTEM.Array.size
       value: 5
@@ -1117,6 +1125,7 @@ MonoBehaviour:
   yMinLimit: -4.5
   LimitObject: {fileID: 1727719144}
   FadePanel: {fileID: 2110250231}
+  fade: {fileID: 0}
 --- !u!212 &502230234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1433,7 +1442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b4891fc735246ad4bbdcc67d96f81ec2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb7dc439bbfa6934699d60760cc3d427, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2054,7 +2063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 37327954976364846b96f6a3665f0446, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb917f1f444645c419cac305f8ef0b7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2586,7 +2595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 644ead5acf0f5044f85e62559c1c8e30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 991807408db93a4458d229b9ff51b1ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2693,7 +2702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58dc56deaac9c784abfa0c2ef4e95650, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a0f859963f6cd7489bcb53df19afdb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

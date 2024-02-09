@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 using static MobCat;
 using static SoundManagerTest;
 using static ButtonController;
-
 public class MobCat : MonoBehaviour
 {
+    [SerializeField]
+    private int mobCatID;
     [SerializeField]
     MobCatMg mobCat;
     //自由に動くスピード
@@ -47,9 +48,6 @@ public class MobCat : MonoBehaviour
     private float _CatcurrentTime;
     [SerializeField, Header("何秒間にするか")]
     private float _CatspanTime;
-
-    [SerializeField]
-    private List<GameObject> _mobCatCenter = new List<GameObject>();
     // 円の半径を設定します。
     [SerializeField]
     private float radius = 2f;
@@ -64,6 +62,7 @@ public class MobCat : MonoBehaviour
     {
         MobCatCV();
         MobCatMoveState();
+        //_screenControl.ScreenCat(mobCatID);
         //動作確認用のキーコード
         if (ButtonController.instance.isCooldown == true)
         {
@@ -111,6 +110,7 @@ public class MobCat : MonoBehaviour
     //一定の動きをする
     private void RandomMove()
     {
+        //_screenControl.ScreenCat();
         if (this.gameObject.transform.position == mobCat._pointPs1[num].transform.position)
         {
             flag = false;
@@ -247,9 +247,18 @@ public class MobCat : MonoBehaviour
     /// </summary>
     private void MobCatsOverlapping()
     {
-        for (int i = 0; i < 7; i++)
-        {
-            
-        }
+        
     }
+    //[SerializeField]private float _minX,_maxX,_minY,_maxY;
+
+
+    // Update is called once per frame
+
+    /*public void ScreenCat()
+    {
+        var pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, _minX, _maxX);
+        pos.y = Mathf.Clamp(pos.y, _minY, _maxY);
+        transform.position = pos;
+    }*/
 }

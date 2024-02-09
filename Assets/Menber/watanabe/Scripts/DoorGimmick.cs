@@ -32,11 +32,8 @@ public class DoorGimmick : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 image.sprite = newSprite;
-                //anim.SetBool("DoorBool", true);
                 door.DoorMove();
 
-                // •ÏX 2/1 ’¹ŠC
-                // •b” 3f -> 4f •ÏX
                 Invoke("SceneChange", 4.0f);
               
             }

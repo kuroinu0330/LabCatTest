@@ -6,30 +6,20 @@ public class ScreenControl : MonoBehaviour
 {
     //public MobCatMg _mobCatMg;
     //public MobCat _mobCat;
+    [SerializeField] 
+    private float _minX,
+                  _maxX,
+                  _minY,
+                  _maxY;
 
-    [SerializeField]
-    private GameObject Testobj;
-    private Vector3 hogeobj;
-    private void Start()
-    {
-        Debug.Log("ScreenWidth:" + Screen.width + "," + "ScreenHeight:" + Screen.height);
-    }
+
     // Update is called once per frame
-    void Update()
+
+    public void ScreenCat()
     {
-        /*for (int num = 0; num < 8; num++)
-        {
-            if (_mobCatMg.MobCats[num].transform.position.x > 1.0f * Screen.width)
-            {
-                Debug.Log("‚Å‚½‚º");
-                _mobCat.move = MobCat.MobCatMove.Free;
-            }
-        }*/
-        hogeobj = Testobj.transform.position;
-        hogeobj = Camera.main.WorldToScreenPoint(transform.position);
-        if (Testobj.transform.position.x > 1.0f * Screen.width)
-        {
-            Debug.Log("‚Å‚½‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ");
-        }
+        var pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, _minX, _maxX);
+        pos.y = Mathf.Clamp(pos.y, _minY, _maxY);
+        transform.position = pos;
     }
 }

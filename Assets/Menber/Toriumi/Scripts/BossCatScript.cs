@@ -100,11 +100,11 @@ public class BossCatScript : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             BossMovePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Debug.Log(BossMovePos);
         }
 
         // 範囲制限 この中で押さなければ反応しない
-        if (BossMovePos.x == Mathf.Clamp(BossMovePos.x, LimitObject.transform.position.x + xMinLimit, LimitObject.transform.position.x + xMaxLimit) &&
+        //X軸の制限が要らなくなったのでコメントアウトにしています。by渡邉拓翔
+        if (/*BossMovePos.x == Mathf.Clamp(BossMovePos.x, LimitObject.transform.position.x + xMinLimit, LimitObject.transform.position.x + xMaxLimit) &&*/
             BossMovePos.y == Mathf.Clamp(BossMovePos.y, LimitObject.transform.position.y + yMinLimit, LimitObject.transform.position.y + yMaxLimit))
         {
             // ほぼ等速で動く
