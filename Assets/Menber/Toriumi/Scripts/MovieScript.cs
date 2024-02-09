@@ -15,20 +15,10 @@ public class MovieScript : MonoBehaviour
         video.loopPointReached += loopPointReached;
     }
 
-    // もし、途中で動画終わらせたかったらエスケープキーでスキップ
-
-    //private void Update()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        SceneManager.LoadScene("TutorialScene");
-    //    }
-    //}
-
     // videoが終わったらされる処理
     public void loopPointReached(VideoPlayer vp)
     {
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("TitleSnTs");
     }
 
 
