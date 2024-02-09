@@ -9,7 +9,9 @@ public class PrologueScript : MonoBehaviour
     [SerializeField]
     GameObject movie;
 
+    [SerializeField]
     float timeCount = 20f;
+    [SerializeField]
     float time = 0f;
 
     bool playFlag;

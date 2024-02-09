@@ -387,10 +387,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &69825867
 Rigidbody2D:
   serializedVersion: 4
@@ -3248,10 +3244,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &613033796
 Rigidbody2D:
   serializedVersion: 4
@@ -4566,10 +4558,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!61 &903225678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5380,10 +5368,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &1020123799
 Rigidbody2D:
   serializedVersion: 4
@@ -6143,10 +6127,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &1140211082
 Rigidbody2D:
   serializedVersion: 4
@@ -9104,7 +9084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ca19fd11178ac40bbf8774a1234a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Channel: 0
+  _Channel: 1
 --- !u!4 &1716539814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3084989710758015763, guid: 149aad71037ac5847bdb832df6fefb0e, type: 3}
@@ -10087,10 +10067,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &1992385101
 Rigidbody2D:
   serializedVersion: 4
@@ -10594,10 +10570,6 @@ MonoBehaviour:
   _CatcurrentTime: 0
   _CatspanTime: 4
   radius: 2
-  _minX: 5
-  _maxX: 5
-  _minY: 5
-  _maxY: 5
 --- !u!50 &2142836579
 Rigidbody2D:
   serializedVersion: 4

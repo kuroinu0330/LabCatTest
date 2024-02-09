@@ -400,7 +400,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277518605}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1039d6928c566c745ad00028851bba41, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 08b3c1acf5a566d47aef79937d5139fa, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.BGM.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioSorces._soundManager
@@ -737,11 +737,15 @@ PrefabInstance:
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.BGM.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: ac0e0e921bb043e4d81276b1e77a315f, type: 3}
+      objectReference: {fileID: 8300000, guid: 12316490035a8dd4394a3f4064df9207, type: 3}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.BGM.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 566961ea40174404699dbb2a778301ff, type: 3}
+      objectReference: {fileID: 8300000, guid: 635b6ea7dce84a841be65f847cc4109d, type: 3}
+    - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
+      propertyPath: _audioClips.BGM.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8fe6c2a40fe9b9746bc0137829bf3d14, type: 3}
     - target: {fileID: 7858153593036525902, guid: 77f745aea5529478a899e2d6ea39fe5a, type: 3}
       propertyPath: _audioClips.SE.SYSTEM.Array.size
       value: 5
