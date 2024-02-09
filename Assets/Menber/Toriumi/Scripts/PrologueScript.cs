@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class PrologueScript : MonoBehaviour
 {
@@ -56,4 +56,8 @@ public class PrologueScript : MonoBehaviour
     }
 
 
+    public void MovieSceneChange()
+    {
+        SceneManager.LoadScene("MovieScene");
+    }
 }
