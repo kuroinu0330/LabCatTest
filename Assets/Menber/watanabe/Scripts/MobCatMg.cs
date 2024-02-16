@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class MobCatMg : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class MobCatMg : MonoBehaviour
     [SerializeField]
     public int CatCount;
     [SerializeField]
-    public Text CatCountText;
+    public TextMeshProUGUI CatCountText;
     public void Start()
     {
         CatCount = 7;
@@ -54,7 +55,8 @@ public class MobCatMg : MonoBehaviour
         if (_pointPs1 == null) return;
         if (_pointPs2 == null) return;
         if (MobCats == null) return;
-       //Invoke("CreateCat",1.0f);
+        //Invoke("CreateCat",1.0f);
+        CatCountText.text = CatCount.ToString();
     }
     private void CreateCat()
     {

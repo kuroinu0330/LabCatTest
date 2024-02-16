@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    // オブジェクトのリスト。ボタンがクリックされたときにこれらのオブジェクトがターゲットに向かって移動します。
-    public List<GameObject> objectsToMove;
-
-    // 移動先のオブジェクト
-    public GameObject targetObject;
 
     // オブジェクトの移動速度
     public float moveSpeed = 5f;
@@ -51,20 +46,6 @@ public class ButtonController : MonoBehaviour
     // インスタンスが生成されたときに最初に呼ばれるメソッド
     private void Start()
     {
-        // objectImagesの配列を初期化する
-        objectImages = new Image[objectsToMove.Count];
-
-        // 各オブジェクトにImageがアタッチされているか確認し、なければ追加する
-        for (int i = 0; i < objectsToMove.Count; i++)
-        {
-            Image image = objectsToMove[i].GetComponent<Image>();
-
-            if (image == null)
-                image = objectsToMove[i].AddComponent<Image>();
-
-            // objectImagesにImageを追加
-            objectImages[i] = image;
-        }
 
         // クールダウンイメージを非表示にする
         cooldownImage.gameObject.SetActive(false);
@@ -86,16 +67,6 @@ public class ButtonController : MonoBehaviour
         }
     }
 
-    // オブジェクトを移動するコルーチン
-    /*IEnumerator MoveObject(GameObject obj)
-    {
-        // オブジェクトがターゲットに到達するまで繰り返す
-        while (Vector3.Distance(obj.transform.position, targetObject.transform.position) > 0.1f)
-        {
-            obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetObject.transform.position, moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-    }*/
 
     // クールダウンを開始するコルーチン
     IEnumerator StartCooldown()

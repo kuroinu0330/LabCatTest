@@ -308,7 +308,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277518605}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1039d6928c566c745ad00028851bba41, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 08b3c1acf5a566d47aef79937d5139fa, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5093520214fdae64ca596c3548a0a80d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 244854af333937946b9f50e0f65b6eb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

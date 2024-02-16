@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Menber/watanabe/Scenes/TitleSnTs.unity
     guid: 7f4cd09f16da003408d29b2ddef346c1
   - enabled: 1
+    path: Assets/Menber/watanabe/Scenes/MovieScene.unity
+    guid: 7f217149bcfabb1429054de30ac5f90a
+  - enabled: 1
     path: Assets/Menber/watanabe/Scenes/TutorialScene.unity
     guid: 207467dd94483c54cbf123b3ac9529a3
   - enabled: 1

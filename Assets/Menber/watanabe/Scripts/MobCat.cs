@@ -48,15 +48,18 @@ public class MobCat : MonoBehaviour
     private float _CatcurrentTime;
     [SerializeField, Header("何秒間にするか")]
     private float _CatspanTime;
-    // 円の半径を設定します。
-    [SerializeField]
-    private float radius = 2f;
+    [SerializeField, Header("開始時間(けずくろい)")]
+    private float _CatSleepTime;
+    [SerializeField, Header("何秒間にするか")]
+    private float _CatSleepSpanTime;
+
+    private int dethCount;
     //猫の行動
     public enum MobCatMove
     {
         Free,
         Gather,
-        _Sleep,
+        Sleeps,
     }
     void FixedUpdate()
     {
@@ -68,10 +71,7 @@ public class MobCat : MonoBehaviour
         {
             move = MobCatMove.Gather;
         }
-        else
-        {
-            move = MobCatMove.Free;
-        }
+
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -80,7 +80,7 @@ public class MobCat : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            move = MobCatMove._Sleep;
+            move = MobCatMove.Sleeps;
         }
     }
     //ステートメント駆動
@@ -96,7 +96,8 @@ public class MobCat : MonoBehaviour
             case MobCatMove.Gather:
                 GatherMove();
                 break;
-            case MobCatMove._Sleep:
+            case MobCatMove.Sleeps:
+                Debug.Log("titititititititititi");
                 SleepMove();
                 break;
         }
@@ -110,6 +111,7 @@ public class MobCat : MonoBehaviour
     //一定の動きをする
     private void RandomMove()
     {
+        Sleep();
         //_screenControl.ScreenCat();
         if (this.gameObject.transform.position == mobCat._pointPs1[num].transform.position)
         {
@@ -134,7 +136,6 @@ public class MobCat : MonoBehaviour
                                                          FreeSpeed * Time.deltaTime);
             }
         }
-        Sleep();
     }
     /*Bossに向かう*/
     private void GatherMove()
@@ -158,7 +159,11 @@ public class MobCat : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             FreeSpeed = 0;
-            mobCat.CatCount--;
+            dethCount++;
+            if (dethCount == 1)
+            {
+                mobCat.CatCount--;
+            }
             anim.SetBool("DeathBool", true);
             mobCat.MobCats.Remove(collision.gameObject);
             Invoke("CatDestroy", 1.3f);
@@ -194,12 +199,28 @@ public class MobCat : MonoBehaviour
     /// </summary>
     private void Sleep()
     {
+        _CatSleepTime += Time.deltaTime;
+        if (_CatSleepTime > _CatSleepSpanTime)
+        {
+            int Ran = Random.Range(0, 100);
+            Debug.Log(Ran);
+            // Debug.Log(Ran);
+            if (Ran < SleepPercent)
+            {
+                Debug.Log("削黒い");
+                move = MobCatMove.Sleeps;
+            }
+            _CatSleepTime = 0;
+        }
+    }
+    private void MobCatCV()
+    {
         _currentTime += Time.deltaTime;
         if (_currentTime > _spanTime)
         {
-            int Ran = Random.Range(0, 10);
+            int Rans = Random.Range(0, 4);
             // Debug.Log(Ran);
-            switch(Ran)
+            switch(Rans)
             {
                 case 0:
                     SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 0);
@@ -221,23 +242,6 @@ public class MobCat : MonoBehaviour
                     SoundManagerTest.instance.PlayAudioSorce(AudioOfType.SYSTEMSE, 4);
                     _currentTime = 0;
                     break;
-            }
-            _currentTime = 0;
-
-            
-        }
-    }
-    private void MobCatCV()
-    {
-        _currentTime += Time.deltaTime;
-        if (_currentTime > _spanTime)
-        {
-            int Ran = Random.Range(0, 100);
-            // Debug.Log(Ran);
-            if (Ran < SleepPercent)
-            {
-                Debug.Log("削黒い");
-                move = MobCatMove._Sleep;
             }
             _currentTime = 0;
         }

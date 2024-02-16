@@ -13,16 +13,15 @@ public class Timer : MonoBehaviour
     public bool startTimer = false;
     private void Start()
     {
-        startTimer = true;
-        if (startTimer == true)
-        {
             stopTimer = false;
+        startTimer = true;
             timerSlider.maxValue = gameTime;
             timerSlider.value = gameTime;
-        }
     }
     private void Update()
     {
+        timerSlider.maxValue = gameTime;
+        timerSlider.value = gameTime;
         if (startTimer == true)
         {
             float time = gameTime - Time.time;
@@ -40,7 +39,6 @@ public class Timer : MonoBehaviour
                 timerSlider.value = time;
             }
         }
-
     }
 }
 

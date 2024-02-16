@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58704803a6ea9914c9c64b969076d20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bgmVolume: 0
-  _seVolume: 0
-  _voiceVolume: 0
+  _bgmVolume: 0.3
+  _seVolume: 1
+  _voiceVolume: 1
   _audioSorces:
     BGM: []
     SE:
@@ -55,11 +55,20 @@ MonoBehaviour:
       PLAYER: []
       ENEMY: []
     VOICE: []
-    _soundManager: {fileID: 0}
+    _soundManager: {fileID: 7858153593036525902}
   _audioClips:
-    BGM: []
+    BGM:
+    - {fileID: 8300000, guid: be28bcea6b179d245b117c48be7f39b9, type: 3}
+    - {fileID: 8300000, guid: 12316490035a8dd4394a3f4064df9207, type: 3}
+    - {fileID: 8300000, guid: 635b6ea7dce84a841be65f847cc4109d, type: 3}
+    - {fileID: 8300000, guid: 8fe6c2a40fe9b9746bc0137829bf3d14, type: 3}
     SE:
-      SYSTEM: []
+      SYSTEM:
+      - {fileID: 8300000, guid: c03eb43e9de7932478fda214052727b2, type: 3}
+      - {fileID: 8300000, guid: 5ee9f0214bb9afc49872bc35e5bf308f, type: 3}
+      - {fileID: 8300000, guid: 58eb08a5c6e49aa42a71f6d9c561e85e, type: 3}
+      - {fileID: 8300000, guid: af57913c69c02a34985a27103812d0b8, type: 3}
+      - {fileID: 8300000, guid: 1c24d5c8c12b728439db45ec80a08e9d, type: 3}
       ENVIRONMENT: []
       PLAYER: []
       ENEMY: []

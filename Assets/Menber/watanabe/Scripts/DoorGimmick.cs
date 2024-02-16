@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static ButtonController;
-using static Timer;
 public class DoorGimmick : MonoBehaviour
 {
     //Ø‚è‘Ö‚¦‚éimage
